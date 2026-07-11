@@ -43,6 +43,9 @@ module.exports = {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
+  			sage: 'hsl(var(--sage))',
+  			charcoal: 'hsl(var(--charcoal))',
+  			bone: 'hsl(var(--bone))',
   			chart: {
   				'1': 'hsl(var(--chart-1))',
   				'2': 'hsl(var(--chart-2))',
