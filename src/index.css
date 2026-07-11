@@ -81,20 +81,20 @@
     --card-foreground: 0 0% 9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 9%;
-    --primary: 144 15% 37%;
+    --primary: 160 11% 41%;
     --primary-foreground: 40 10% 97%;
     --secondary: 40 6% 94%;
     --secondary-foreground: 0 0% 9%;
     --muted: 40 6% 94%;
     --muted-foreground: 0 0% 42%;
-    --accent: 144 15% 37%;
+    --accent: 160 11% 41%;
     --accent-foreground: 40 10% 97%;
     --destructive: 0 62% 40%;
     --destructive-foreground: 40 10% 97%;
     --border: 40 6% 87%;
     --input: 40 6% 87%;
-    --ring: 144 15% 37%;
-    --chart-1: 144 15% 37%;
+    --ring: 160 11% 41%;
+    --chart-1: 160 11% 41%;
     --chart-2: 200 30% 40%;
     --chart-3: 30 40% 50%;
     --chart-4: 280 20% 50%;
@@ -104,17 +104,17 @@
     --font-body: 'Blauer Nue', 'Dubai', ui-sans-serif, system-ui, sans-serif;
     --font-display: 'Blauer Nue', 'Dubai', ui-sans-serif, system-ui, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --sage: 144 15% 37%;
+    --sage: 160 11% 41%;
     --charcoal: 0 0% 7%;
     --bone: 40 10% 97%;
     --sidebar-background: 40 10% 97%;
     --sidebar-foreground: 0 0% 9%;
-    --sidebar-primary: 144 15% 37%;
+    --sidebar-primary: 160 11% 41%;
     --sidebar-primary-foreground: 40 10% 97%;
     --sidebar-accent: 40 6% 94%;
     --sidebar-accent-foreground: 0 0% 9%;
     --sidebar-border: 40 6% 87%;
-    --sidebar-ring: 144 15% 37%;
+    --sidebar-ring: 160 11% 41%;
   }
 
   .dark {
@@ -124,20 +124,20 @@
     --card-foreground: 40 10% 97%;
     --popover: 0 0% 7%;
     --popover-foreground: 40 10% 97%;
-    --primary: 144 15% 37%;
+    --primary: 160 11% 41%;
     --primary-foreground: 40 10% 97%;
     --secondary: 0 0% 14%;
     --secondary-foreground: 40 10% 97%;
     --muted: 0 0% 14%;
     --muted-foreground: 0 0% 60%;
-    --accent: 144 15% 37%;
+    --accent: 160 11% 41%;
     --accent-foreground: 40 10% 97%;
     --destructive: 0 62% 40%;
     --destructive-foreground: 40 10% 97%;
     --border: 0 0% 16%;
     --input: 0 0% 16%;
-    --ring: 144 15% 37%;
-    --sage: 144 15% 37%;
+    --ring: 160 11% 41%;
+    --sage: 160 11% 41%;
     --charcoal: 0 0% 7%;
     --bone: 40 10% 97%;
   }

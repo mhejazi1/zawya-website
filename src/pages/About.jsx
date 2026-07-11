@@ -7,7 +7,7 @@ import AnimatedLine from "@/components/AnimatedLine";
 import { content } from "@/data/content";
 import { useLanguage } from "@/lib/LanguageContext";
 
-const ABOUT_HERO = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/26e164f3d_generated_image.png";
+const ABOUT_HERO = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/417e040fe_generated_image.png";
 
 export default function About() {
   const { lang } = useLanguage();
