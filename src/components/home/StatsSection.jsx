@@ -1,9 +1,13 @@
 import StatCounter from "@/components/StatCounter";
 import Reveal from "@/components/Reveal";
 import AnimatedLine from "@/components/AnimatedLine";
-import { stats } from "@/data/siteContent";
+import { content } from "@/data/content";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function StatsSection() {
+  const { lang } = useLanguage();
+  const stats = content[lang].stats;
+
   return (
     <section className="py-20 md:py-32 px-6 md:px-10 lg:px-16 bg-background">
       <AnimatedLine className="mb-16 md:mb-24" />

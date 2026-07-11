@@ -1,23 +1,27 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowLeft } from "lucide-react";
-import { getProjectById, getNextProject } from "@/data/projects";
+import { getProjectById, getNextProject, tr } from "@/data/projects";
+import { content } from "@/data/content";
+import { useLanguage } from "@/lib/LanguageContext";
 import Reveal from "@/components/Reveal";
 
 export default function ProjectDetail() {
   const { id } = useParams();
+  const { lang } = useLanguage();
+  const t = content[lang].ui.projectDetail;
   const project = getProjectById(id);
 
   if (!project) {
     return (
       <div className="pt-32 px-6 md:px-10 lg:px-16 min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <p className="technical text-muted-foreground mb-4">404 — Project Not Found</p>
+          <p className="technical text-muted-foreground mb-4">{t.notFound}</p>
           <Link
             to="/projects"
             className="text-lg font-bold border-b border-foreground pb-1 hover:border-sage hover:text-sage transition-colors"
           >
-            Back to Projects
+            {t.back}
           </Link>
         </div>
       </div>
@@ -28,22 +32,20 @@ export default function ProjectDetail() {
 
   return (
     <div className="pt-20">
-      {/* Back link */}
       <div className="px-6 md:px-10 lg:px-16 py-6">
         <Link
           to="/projects"
           className="group inline-flex items-center gap-2 technical text-muted-foreground hover:text-sage transition-colors"
         >
-          <ArrowLeft size={14} strokeWidth={1.5} className="group-hover:-translate-x-1 transition-transform" />
-          Back to Projects
+          <ArrowLeft size={14} strokeWidth={1.5} className="group-hover:-translate-x-1 transition-transform rtl:rotate-180" />
+          {t.back}
         </Link>
       </div>
 
-      {/* Hero */}
       <section className="relative h-[55vh] md:h-[75vh] min-h-[400px] overflow-hidden bg-charcoal">
         <motion.img
           src={project.image}
-          alt={project.name}
+          alt={tr(project, "name", lang)}
           className="absolute inset-0 w-full h-full object-cover"
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
@@ -60,7 +62,7 @@ export default function ProjectDetail() {
             >
               <span className="technical text-white/60">{project.countryCode}</span>
               <div className="w-8 h-px bg-white/30" />
-              <span className="technical text-white/60">{project.assetType}</span>
+              <span className="technical text-white/60">{tr(project, "assetType", lang)}</span>
             </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -68,49 +70,47 @@ export default function ProjectDetail() {
               transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
               className="text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[0.95] text-balance"
             >
-              {project.name}
+              {tr(project, "name", lang)}
             </motion.h1>
           </div>
         </div>
       </section>
 
-      {/* Content with sticky sidebar */}
       <section className="px-6 md:px-10 lg:px-16 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
-          {/* Sticky sidebar */}
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-28 space-y-8">
               <div>
-                <span className="technical text-sage block mb-4">Project DNA</span>
+                <span className="technical text-sage block mb-4">{t.dna}</span>
                 <div className="space-y-0">
                   <div className="flex justify-between border-b border-border py-3">
-                    <span className="technical text-muted-foreground">Asset Type</span>
-                    <span className="text-sm font-medium text-right">{project.assetType}</span>
+                    <span className="technical text-muted-foreground">{t.assetType}</span>
+                    <span className="text-sm font-medium text-right">{tr(project, "assetType", lang)}</span>
                   </div>
                   <div className="flex justify-between border-b border-border py-3">
-                    <span className="technical text-muted-foreground">Location</span>
-                    <span className="text-sm font-medium text-right">{project.location}</span>
+                    <span className="technical text-muted-foreground">{t.location}</span>
+                    <span className="text-sm font-medium text-right">{tr(project, "location", lang)}</span>
                   </div>
                   <div className="flex justify-between border-b border-border py-3">
-                    <span className="technical text-muted-foreground">Area</span>
+                    <span className="technical text-muted-foreground">{t.area}</span>
                     <span className="text-sm font-medium text-right">
-                      {project.area} {project.areaUnit}
+                      {project.area} {tr(project, "areaUnit", lang)}
                     </span>
                   </div>
                   {project.units && (
                     <div className="flex justify-between border-b border-border py-3">
-                      <span className="technical text-muted-foreground">{project.unitsLabel}</span>
+                      <span className="technical text-muted-foreground">{tr(project, "unitsLabel", lang)}</span>
                       <span className="text-sm font-medium text-right">{project.units}</span>
                     </div>
                   )}
                   {project.partner && (
                     <div className="flex justify-between border-b border-border py-3">
-                      <span className="technical text-muted-foreground">Partner</span>
+                      <span className="technical text-muted-foreground">{t.partner}</span>
                       <span className="text-sm font-medium text-right">{project.partner}</span>
                     </div>
                   )}
                   <div className="flex justify-between border-b border-border py-3">
-                    <span className="technical text-muted-foreground">Coordinates</span>
+                    <span className="technical text-muted-foreground">{t.coordinates}</span>
                     <span className="text-xs font-mono text-right">{project.coordinates}</span>
                   </div>
                 </div>
@@ -118,9 +118,9 @@ export default function ProjectDetail() {
 
               {project.scopeOfWork && (
                 <div>
-                  <span className="technical text-sage block mb-4">Scope of Work</span>
+                  <span className="technical text-sage block mb-4">{t.scope}</span>
                   <ul className="space-y-2.5">
-                    {project.scopeOfWork.map((item, i) => (
+                    {tr(project, "scopeOfWork", lang).map((item, i) => (
                       <li
                         key={i}
                         className="text-sm text-muted-foreground flex items-start gap-2.5"
@@ -135,15 +135,13 @@ export default function ProjectDetail() {
             </div>
           </div>
 
-          {/* Main content */}
           <div className="lg:col-span-8">
             <Reveal>
               <p className="text-lg md:text-xl leading-relaxed text-foreground/80 mb-12 md:mb-16">
-                {project.description}
+                {tr(project, "description", lang)}
               </p>
             </Reveal>
 
-            {/* Gallery */}
             {project.gallery && (
               <div className="space-y-6 md:space-y-10">
                 {project.gallery.map((img, i) => (
@@ -151,7 +149,7 @@ export default function ProjectDetail() {
                     <div className="overflow-hidden bg-muted">
                       <img
                         src={img}
-                        alt={`${project.name} — ${i + 1}`}
+                        alt={`${tr(project, "name", lang)} — ${i + 1}`}
                         className="w-full h-auto object-cover"
                       />
                     </div>
@@ -160,12 +158,10 @@ export default function ProjectDetail() {
               </div>
             )}
 
-            {/* Quote */}
             <Reveal>
               <div className="my-16 md:my-24 py-8 border-y border-border">
                 <blockquote className="text-xl md:text-3xl font-bold tracking-tight display-serif text-balance leading-[1.2]">
-                  &ldquo;We do not build for today. We build for the generations who will inherit our
-                  work.&rdquo;
+                  &ldquo;{t.quote}&rdquo;
                 </blockquote>
               </div>
             </Reveal>
@@ -173,7 +169,6 @@ export default function ProjectDetail() {
         </div>
       </section>
 
-      {/* Next project */}
       <section className="border-t border-border">
         <Link
           to={`/projects/${nextProject.id}`}
@@ -181,15 +176,15 @@ export default function ProjectDetail() {
         >
           <div className="flex items-center justify-between gap-8">
             <div>
-              <span className="technical text-muted-foreground block mb-3">Next Project</span>
+              <span className="technical text-muted-foreground block mb-3">{t.nextProject}</span>
               <h3 className="text-2xl md:text-4xl font-bold tracking-tight group-hover:text-sage transition-colors">
-                {nextProject.name}
+                {tr(nextProject, "name", lang)}
               </h3>
             </div>
             <ArrowRight
               size={32}
               strokeWidth={1.5}
-              className="text-muted-foreground group-hover:text-sage group-hover:translate-x-4 transition-all duration-500 flex-shrink-0"
+              className="text-muted-foreground group-hover:text-sage group-hover:translate-x-4 transition-all duration-500 flex-shrink-0 rtl:rotate-180"
             />
           </div>
         </Link>

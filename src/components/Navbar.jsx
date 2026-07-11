@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import { navLinks, company } from "@/data/siteContent";
+import { Menu, X, Globe } from "lucide-react";
+import { content, logoUrl } from "@/data/content";
 import { projects } from "@/data/projects";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Navbar() {
+  const { lang, toggleLang } = useLanguage();
+  const t = content[lang];
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [hoveredLink, setHoveredLink] = useState(null);
@@ -40,22 +43,31 @@ export default function Navbar() {
       >
         <div className="px-6 md:px-10 lg:px-16 h-20 flex items-center justify-between">
           <Link to="/" className="group flex items-center gap-3">
+            <img src={logoUrl} alt="Zawya" className="h-8 w-8 object-contain" />
             <span className={`text-lg font-bold tracking-[0.25em] transition-colors duration-500 ${transparent ? "text-white" : "text-foreground"}`}>
-              ZAWYA
-            </span>
-            <span className={`hidden sm:block technical transition-colors duration-500 ${transparent ? "text-white/50" : "text-muted-foreground"}`}>
-              DEVELOPMENTS
+              {t.company.name.toUpperCase()}
             </span>
           </Link>
 
-          <button
-            onClick={() => setMenuOpen(true)}
-            className={`flex items-center gap-3 transition-colors duration-500 ${transparent ? "text-white" : "text-foreground"}`}
-            aria-label="Open menu"
-          >
-            <span className="technical hidden sm:block">Menu</span>
-            <Menu size={20} strokeWidth={1.5} />
-          </button>
+          <div className="flex items-center gap-6">
+            <button
+              onClick={toggleLang}
+              className={`flex items-center gap-2 transition-colors duration-500 ${transparent ? "text-white/70 hover:text-white" : "text-muted-foreground hover:text-foreground"}`}
+              aria-label="Toggle language"
+            >
+              <Globe size={16} strokeWidth={1.5} />
+              <span className="technical">{lang === "en" ? "العربية" : "English"}</span>
+            </button>
+
+            <button
+              onClick={() => setMenuOpen(true)}
+              className={`flex items-center gap-3 transition-colors duration-500 ${transparent ? "text-white" : "text-foreground"}`}
+              aria-label="Open menu"
+            >
+              <span className="technical hidden sm:block">{t.ui.navbar.menu}</span>
+              <Menu size={20} strokeWidth={1.5} />
+            </button>
+          </div>
         </div>
       </header>
 
@@ -69,7 +81,7 @@ export default function Navbar() {
             className="fixed inset-0 z-[300] bg-charcoal text-white"
           >
             <AnimatePresence>
-              {hoveredLink === "Projects" && (
+              {hoveredLink === t.ui.projectsSection.label && (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 0.12 }}
@@ -83,19 +95,22 @@ export default function Navbar() {
 
             <div className="relative h-full flex flex-col">
               <div className="px-6 md:px-10 lg:px-16 h-20 flex items-center justify-between">
-                <span className="text-lg font-bold tracking-[0.25em] text-white">ZAWYA</span>
+                <div className="flex items-center gap-3">
+                  <img src={logoUrl} alt="Zawya" className="h-8 w-8 object-contain" />
+                  <span className="text-lg font-bold tracking-[0.25em] text-white">{t.company.name.toUpperCase()}</span>
+                </div>
                 <button
                   onClick={() => setMenuOpen(false)}
                   className="flex items-center gap-3 text-white"
                   aria-label="Close menu"
                 >
-                  <span className="technical">Close</span>
+                  <span className="technical">{t.ui.navbar.close}</span>
                   <X size={20} strokeWidth={1.5} />
                 </button>
               </div>
 
               <nav className="flex-1 flex flex-col justify-center px-6 md:px-10 lg:px-16">
-                {navLinks.map((link, i) => (
+                {t.navLinks.map((link, i) => (
                   <motion.div
                     key={link.path}
                     initial={{ opacity: 0, y: 30 }}
@@ -118,8 +133,8 @@ export default function Navbar() {
               </nav>
 
               <div className="px-6 md:px-10 lg:px-16 py-8 flex flex-col md:flex-row justify-between gap-4">
-                <span className="technical text-white/30 max-w-md">{company.tagline}</span>
-                <span className="technical text-white/30">Riyadh — Dubai</span>
+                <span className="technical text-white/30 max-w-md">{t.company.tagline}</span>
+                <span className="technical text-white/30">{t.ui.navbar.locations}</span>
               </div>
             </div>
           </motion.div>

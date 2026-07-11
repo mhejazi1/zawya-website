@@ -1,21 +1,25 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import { useLanguage } from "@/lib/LanguageContext";
+import { tr } from "@/data/projects";
 
 export default function ProjectCard({ project, className = "" }) {
+  const { lang } = useLanguage();
+
   return (
     <Link to={`/projects/${project.id}`} className={`group block ${className}`}>
       <div className="relative overflow-hidden aspect-[4/3] bg-muted">
         <img
           src={project.image}
-          alt={project.name}
+          alt={tr(project, "name", lang)}
           className="w-full h-full object-cover img-grayscale group-hover:scale-105 transition-transform duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
         />
         <div className="absolute top-3 left-3 right-3 flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <span className="technical text-white bg-black/50 backdrop-blur-sm px-2.5 py-1">
-            {project.assetType}
+            {tr(project, "assetType", lang)}
           </span>
           <span className="technical text-white bg-black/50 backdrop-blur-sm px-2.5 py-1">
-            {project.area} {project.areaUnit}
+            {project.area} {tr(project, "areaUnit", lang)}
           </span>
         </div>
       </div>
@@ -23,12 +27,12 @@ export default function ProjectCard({ project, className = "" }) {
         <div>
           <div className="flex items-center gap-2 mb-1.5">
             <span className="technical text-sage">{project.countryCode}</span>
-            <span className="technical text-muted-foreground">— {project.location.split(",")[0]}</span>
+            <span className="technical text-muted-foreground">— {tr(project, "location", lang).split(",")[0]}</span>
           </div>
-          <h3 className="font-bold tracking-tight text-base md:text-lg leading-tight">{project.name}</h3>
+          <h3 className="font-bold tracking-tight text-base md:text-lg leading-tight">{tr(project, "name", lang)}</h3>
           {project.units && (
             <p className="technical text-muted-foreground mt-2">
-              {project.units} {project.unitsLabel}
+              {project.units} {tr(project, "unitsLabel", lang)}
             </p>
           )}
         </div>

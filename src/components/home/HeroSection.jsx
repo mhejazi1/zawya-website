@@ -1,10 +1,14 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { content } from "@/data/content";
+import { useLanguage } from "@/lib/LanguageContext";
 
 const HERO_IMAGE = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/7545a845b_generated_image.png";
 
 export default function HeroSection() {
+  const { lang } = useLanguage();
+  const t = content[lang].ui.hero;
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 0.3], [1.12, 1]);
   const opacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
@@ -28,7 +32,7 @@ export default function HeroSection() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="technical text-white/50 block mb-6"
           >
-            Real Estate Development & Advisory — KSA · UAE · East Africa
+            {t.subtitle}
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -36,7 +40,7 @@ export default function HeroSection() {
             transition={{ delay: 0.6, duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="text-4xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-bold tracking-tight text-white leading-[0.95] text-balance"
           >
-            Harmonizing Development Success with Design Excellence
+            {content[lang].company.tagline}
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -48,14 +52,14 @@ export default function HeroSection() {
               to="/projects"
               className="group inline-flex items-center justify-center gap-3 bg-white text-charcoal px-8 py-4 text-sm font-medium tracking-wide hover:bg-sage hover:text-white transition-colors duration-300"
             >
-              Explore Our Projects
-              <ArrowRight size={16} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
+              {t.ctaPrimary}
+              <ArrowRight size={16} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform rtl:rotate-180" />
             </Link>
             <Link
               to="/about"
               className="inline-flex items-center justify-center gap-3 border border-white/30 text-white px-8 py-4 text-sm font-medium tracking-wide hover:bg-white/10 transition-colors duration-300"
             >
-              About Zawya
+              {t.ctaSecondary}
             </Link>
           </motion.div>
         </div>
@@ -65,7 +69,7 @@ export default function HeroSection() {
         style={{ opacity }}
         className="absolute bottom-8 right-6 md:right-10 lg:right-16 flex flex-col items-center gap-3"
       >
-        <span className="technical text-white/40 [writing-mode:vertical-rl] rotate-180">Scroll</span>
+        <span className="technical text-white/40 [writing-mode:vertical-rl] rotate-180 rtl:[writing-mode:vertical-lr] rtl:rotate-0">{t.scroll}</span>
         <div className="w-px h-12 bg-white/30" />
       </motion.div>
     </section>
