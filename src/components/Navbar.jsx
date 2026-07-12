@@ -44,9 +44,9 @@ export default function Navbar() {
         <div className="px-6 md:px-10 lg:px-16 h-20 flex items-center justify-between">
           <Link to="/" className="group flex items-center gap-3">
             <img src={logoUrl} alt="Zawya" className="h-8 w-8 object-contain" />
-            <span className={`text-lg font-bold tracking-[0.25em] transition-colors duration-500 hidden ${transparent ? "text-white" : "text-foreground"}`}>
-              {t.company.name.toUpperCase()}
-            </span>
+            
+
+            
           </Link>
 
           <div className="flex items-center gap-6">
