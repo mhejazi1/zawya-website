@@ -38,7 +38,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-bold tracking-tight leading-[0.95] text-balance text-4xl md:text-4xl lg:text-4xl xl:text-4xl">
+            className="font-bold tracking-tight leading-[0.95] text-balance text-4xl md:text-4xl lg:text-4xl xl:text-4xl [font-family:'Blauer_Nue',_'Dubai',_ui-sans-serif,_system-ui,_sans-serif]">
             
             {content[lang].company.tagline}
           </motion.h1>
