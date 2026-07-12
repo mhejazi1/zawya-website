@@ -38,7 +38,7 @@ With over 1.3 million square meters of developed area across ten flagship projec
 Our team brings direct experience in hotel development, operator negotiation, pre-opening coordination, and asset management—ensuring every hospitality asset performs to its full potential from day one.`,
     },
     stats: [
-      { value: "1.3M+", label: "SQM Developed" },
+      { value: "1.3M+", label: "SQM Under Development" },
       { value: "10", label: "Flagship Projects" },
       { value: "3", label: "Countries" },
       { value: "6", label: "Service Pillars" },
@@ -224,7 +224,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
 يجلب فريقنا خبرة مباشرة في تطوير الفنادق والتفاوض مع المشغلين والتنسيق قبل الافتتاح وإدارة الأصول — مما يضمن أن كل أصل ضيافة يؤدي بكامل إمكاناته من اليوم الأول.`,
     },
     stats: [
-      { value: "+1.3M", label: "م² مطورة" },
+      { value: "+1.3M", label: "م² قيد التطوير" },
       { value: "10", label: "مشاريع رئيسية" },
       { value: "3", label: "دول" },
       { value: "6", label: "ركائز خدمية" },

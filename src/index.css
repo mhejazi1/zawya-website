@@ -244,4 +244,26 @@
   .text-pretty { text-wrap: pretty; }
   .perspective-1000 { perspective: 1000px; }
   .backface-hidden { backface-visibility: hidden; }
+  .marquee-track {
+    animation: marqueeRight 40s linear infinite;
+    width: max-content;
+  }
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+  .wave-gradient {
+    background: linear-gradient(90deg, hsl(160 11% 25%), hsl(160 11% 55%), hsl(160 11% 35%), hsl(160 11% 60%), hsl(160 11% 25%));
+    background-size: 200% 100%;
+    animation: waveFlow 3s linear infinite;
+  }
+}
+
+@keyframes marqueeRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes waveFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
 }

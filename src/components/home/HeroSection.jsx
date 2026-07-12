@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { content } from "@/data/content";
 import { useLanguage } from "@/lib/LanguageContext";
 
-const HERO_IMAGE = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/7605aa9a6_generated_image.png";
+const HERO_IMAGE = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/8d24a79fe_image78.png";
 
 export default function HeroSection() {
   const { lang } = useLanguage();
