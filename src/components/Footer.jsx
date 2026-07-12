@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="md:col-span-5">
             <Link to="/" className="inline-flex items-center gap-3 mb-6">
               <img src={logoUrl} alt="Zawya" className="h-8 w-8 object-contain" />
-              <h3 className="text-2xl font-bold tracking-[0.25em] text-white hidden">{t.company.name.toUpperCase()}</h3>
+              
             </Link>
             <p className="text-white/40 text-sm leading-relaxed max-w-sm">
               {t.company.tagline}
