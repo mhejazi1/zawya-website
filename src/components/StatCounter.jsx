@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
-export default function StatCounter({ value, label, delay = 0 }) {
+export default function StatCounter({ value, label, delay = 0, light = false }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
   const isNumeric = /^\d+$/.test(value);
@@ -30,10 +30,10 @@ export default function StatCounter({ value, label, delay = 0 }) {
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
     >
-      <div className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+      <div className={`text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight ${light ? "text-white" : ""}`}>
         {isNumeric ? count : value}
       </div>
-      <div className="technical text-muted-foreground mt-3">{label}</div>
+      <div className={`technical mt-3 ${light ? "text-white/70" : "text-muted-foreground"}`}>{label}</div>
     </motion.div>
   );
 }

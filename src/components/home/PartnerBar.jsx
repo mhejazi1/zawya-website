@@ -19,9 +19,9 @@ export default function PartnerBar() {
   const logos = [...PARTNER_LOGOS, ...PARTNER_LOGOS];
 
   return (
-    <section className="py-16 md:py-20 bg-charcoal overflow-hidden">
+    <section className="py-16 md:py-20 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto mb-10 px-6 md:px-10 lg:px-16">
-        <span className="technical text-white/30 block text-center">
+        <span className="technical text-muted-foreground block text-center">
           {t.ui.partners.label}
         </span>
       </div>

@@ -86,7 +86,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       { label: "Home", path: "/" },
       { label: "About", path: "/about" },
       { label: "Projects", path: "/projects" },
-      { label: "Services", path: "/services" },
+      { label: "Expertise", path: "/services" },
       { label: "Contact", path: "/contact" },
     ],
     contactInfo: {
@@ -108,7 +108,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
         label: "What We Do",
         title: "Six pillars of integrated real estate expertise",
         description: "From land identification to facility management, we cover the full lifecycle of real estate development.",
-        viewAll: "View All Services",
+        viewAll: "View All Expertise",
       },
       projectsSection: {
         number: "03",
@@ -154,7 +154,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       },
       servicesPage: {
         number: "01",
-        label: "Services",
+        label: "Expertise",
         title: "Six pillars of integrated real estate expertise",
         description: "Our comprehensive approach covers every stage of the real estate lifecycle, ensuring seamless execution from concept to operation.",
         cta: "Discuss Your Project",
@@ -272,7 +272,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       { label: "الرئيسية", path: "/" },
       { label: "من نحن", path: "/about" },
       { label: "المشاريع", path: "/projects" },
-      { label: "الخدمات", path: "/services" },
+      { label: "الخبرات", path: "/services" },
       { label: "تواصل معنا", path: "/contact" },
     ],
     contactInfo: {
@@ -294,7 +294,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
         label: "ماذا نقدم",
         title: "ست ركائز للخبرة العقارية المتكاملة",
         description: "من تحديد الأراضي إلى إدارة المرافق، نحن نغطي دورة حياة التطوير العقاري بالكامل.",
-        viewAll: "عرض جميع الخدمات",
+        viewAll: "عرض جميع الخبرات",
       },
       projectsSection: {
         number: "03",
@@ -340,7 +340,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       },
       servicesPage: {
         number: "01",
-        label: "الخدمات",
+        label: "الخبرات",
         title: "ست ركائز للخبرة العقارية المتكاملة",
         description: "نهجنا الشامل يغطي كل مرحلة من مراحل دورة حياة العقار، مما يضمن التنفيذ السلس من المفهوم إلى التشغيل.",
         cta: "ناقش مشروعك",
