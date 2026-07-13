@@ -19,13 +19,13 @@ export default function ProjectDetail() {
           <p className="technical text-muted-foreground mb-4">{t.notFound}</p>
           <Link
             to="/projects"
-            className="text-lg font-bold border-b border-foreground pb-1 hover:border-sage hover:text-sage transition-colors"
-          >
+            className="text-lg font-bold border-b border-foreground pb-1 hover:border-sage hover:text-sage transition-colors">
+            
             {t.back}
           </Link>
         </div>
-      </div>
-    );
+      </div>);
+
   }
 
   const nextProject = getNextProject(id);
@@ -35,8 +35,8 @@ export default function ProjectDetail() {
       <div className="px-6 md:px-10 lg:px-16 py-6">
         <Link
           to="/projects"
-          className="group inline-flex items-center gap-2 technical text-muted-foreground hover:text-sage transition-colors"
-        >
+          className="group inline-flex items-center gap-2 technical text-muted-foreground hover:text-sage transition-colors">
+          
           <ArrowLeft size={14} strokeWidth={1.5} className="group-hover:-translate-x-1 transition-transform rtl:rotate-180" />
           {t.back}
         </Link>
@@ -49,8 +49,8 @@ export default function ProjectDetail() {
           className="absolute inset-0 w-full h-full object-cover"
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-        />
+          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }} />
+        
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative h-full flex items-end px-6 md:px-10 lg:px-16 pb-12 md:pb-20">
           <div className="max-w-5xl">
@@ -58,8 +58,8 @@ export default function ProjectDetail() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="flex items-center gap-3 mb-5"
-            >
+              className="flex items-center gap-3 mb-5">
+              
               <span className="technical text-white/60">{project.countryCode}</span>
               <div className="w-8 h-px bg-white/30" />
               <span className="technical text-white/60">{tr(project, "assetType", lang)}</span>
@@ -68,8 +68,8 @@ export default function ProjectDetail() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[0.95] text-balance"
-            >
+              className="text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[0.95] text-balance">
+              
               {tr(project, "name", lang)}
             </motion.h1>
           </div>
@@ -97,18 +97,18 @@ export default function ProjectDetail() {
                       {project.area} {tr(project, "areaUnit", lang)}
                     </span>
                   </div>
-                  {project.units && (
-                    <div className="flex justify-between border-b border-border py-3">
+                  {project.units &&
+                  <div className="flex justify-between border-b border-border py-3">
                       <span className="technical text-muted-foreground">{tr(project, "unitsLabel", lang)}</span>
                       <span className="text-sm font-medium text-right">{project.units}</span>
                     </div>
-                  )}
-                  {project.partner && (
-                    <div className="flex justify-between border-b border-border py-3">
+                  }
+                  {project.partner &&
+                  <div className="flex justify-between border-b border-border py-3">
                       <span className="technical text-muted-foreground">{t.partner}</span>
                       <span className="text-sm font-medium text-right">{project.partner}</span>
                     </div>
-                  )}
+                  }
                   <div className="flex justify-between border-b border-border py-3">
                     <span className="technical text-muted-foreground">{t.coordinates}</span>
                     <span className="text-xs font-mono text-right">{project.coordinates}</span>
@@ -116,22 +116,22 @@ export default function ProjectDetail() {
                 </div>
               </div>
 
-              {project.scopeOfWork && (
-                <div>
+              {project.scopeOfWork &&
+              <div>
                   <span className="technical text-sage block mb-4">{t.scope}</span>
                   <ul className="space-y-2.5">
-                    {tr(project, "scopeOfWork", lang).map((item, i) => (
-                      <li
-                        key={i}
-                        className="text-sm text-muted-foreground flex items-start gap-2.5"
-                      >
+                    {tr(project, "scopeOfWork", lang).map((item, i) =>
+                  <li
+                    key={i}
+                    className="text-sm text-muted-foreground flex items-start gap-2.5">
+                    
                         <span className="text-sage mt-0.5">—</span>
                         {item}
                       </li>
-                    ))}
+                  )}
                   </ul>
                 </div>
-              )}
+              }
             </div>
           </div>
 
@@ -142,21 +142,21 @@ export default function ProjectDetail() {
               </p>
             </Reveal>
 
-            {project.gallery && (
-              <div className="space-y-6 md:space-y-10">
-                {project.gallery.map((img, i) => (
-                  <Reveal key={i} delay={i * 0.1}>
+            {project.gallery &&
+            <div className="space-y-6 md:space-y-10">
+                {project.gallery.map((img, i) =>
+              <Reveal key={i} delay={i * 0.1}>
                     <div className="overflow-hidden bg-muted">
-                      <img
-                        src={img}
-                        alt={`${tr(project, "name", lang)} — ${i + 1}`}
-                        className="w-full h-auto object-cover"
-                      />
+                      <img src="https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/8d24a79fe_image78.png"
+
+                  alt={`${tr(project, "name", lang)} — ${i + 1}`}
+                  className="w-full h-auto object-cover" />
+                  
                     </div>
                   </Reveal>
-                ))}
+              )}
               </div>
-            )}
+            }
 
             <Reveal>
               <div className="my-16 md:my-24 py-8 border-y border-border">
@@ -172,8 +172,8 @@ export default function ProjectDetail() {
       <section className="border-t border-border">
         <Link
           to={`/projects/${nextProject.id}`}
-          className="group block px-6 md:px-10 lg:px-16 py-16 md:py-24 hover:bg-muted/30 transition-colors"
-        >
+          className="group block px-6 md:px-10 lg:px-16 py-16 md:py-24 hover:bg-muted/30 transition-colors">
+          
           <div className="flex items-center justify-between gap-8">
             <div>
               <span className="technical text-muted-foreground block mb-3">{t.nextProject}</span>
@@ -184,11 +184,11 @@ export default function ProjectDetail() {
             <ArrowRight
               size={32}
               strokeWidth={1.5}
-              className="text-muted-foreground group-hover:text-sage group-hover:translate-x-4 transition-all duration-500 flex-shrink-0 rtl:rotate-180"
-            />
+              className="text-muted-foreground group-hover:text-sage group-hover:translate-x-4 transition-all duration-500 flex-shrink-0 rtl:rotate-180" />
+            
           </div>
         </Link>
       </section>
-    </div>
-  );
+    </div>);
+
 }
