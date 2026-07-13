@@ -10,7 +10,7 @@ export default function ClosingCTA() {
   const t = content[lang].ui.cta;
 
   return (
-    <section className="py-20 md:py-32 px-6 md:px-10 lg:px-16 bg-background">
+    <section className="py-20 md:py-32 px-6 md:px-10 lg:px-16 bg-background hidden">
       <AnimatedLine className="mb-16 md:mb-24" />
       <Reveal>
         <div className="text-center max-w-4xl mx-auto">
@@ -23,13 +23,13 @@ export default function ClosingCTA() {
           </p>
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 text-sm font-medium tracking-wide hover:bg-sage transition-colors duration-300"
-          >
+            className="group inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 text-sm font-medium tracking-wide hover:bg-sage transition-colors duration-300">
+            
             {t.button}
             <ArrowRight size={16} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform rtl:rotate-180" />
           </Link>
         </div>
       </Reveal>
-    </section>
-  );
+    </section>);
+
 }

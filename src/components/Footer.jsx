@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-charcoal text-white">
-      <div className="px-6 md:px-10 lg:px-16 py-16 md:py-24">
+      <div className="px-6 md:px-10 lg:px-16 py-16 md:py-24 opacity-100">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           <div className="md:col-span-5">
             <Link to="/" className="inline-flex items-center gap-3 mb-6">
