@@ -9,15 +9,15 @@ export const content = {
       tagline: "Harmonizing Development Success with Design Excellence",
       shortDescription:
         "A premier real estate development and advisory firm headquartered in Saudi Arabia, with a strategic co-entity in Dubai.",
-      aboutText: `Zawya Developments is a premier real estate development and advisory firm headquartered in Riyadh, Saudi Arabia, with a strategic co-entity—CCGi Middle East—in Dubai, United Arab Emirates. We harmonize development success with design excellence, delivering landmark projects across the Kingdom of Saudi Arabia, the United Arab Emirates, and East Africa.
+      aboutText: `Zawya Developments is a premier real estate development and advisory firm headquartered in Riyadh, Saudi Arabia, with a strategic co-entity—CCGi Middle East—in Dubai, United Arab Emirates. We harmonize development success with design excellence, delivering landmark projects across the Kingdom of Saudi Arabia and the United Arab Emirates.
 
 Our integrated approach spans the full real estate lifecycle—from land identification and feasibility through design management, construction, operation, and facility management. We partner with the world's leading hospitality brands, institutional investors, and government entities to create developments that endure.
 
-With over 1.3 million square meters of developed area across ten flagship projects, Zawya stands as a trusted partner to IHG, the Saudi Ministry of Investment, Eagle Hills, and other industry leaders who share our commitment to architectural integrity and predictable long-term results.`,
+With over 1.3 million square meters under development across ten flagship projects, Zawya stands as a trusted partner to IHG, the Saudi Ministry of Investment, Eagle Hills, and other industry leaders who share our commitment to architectural integrity and predictable long-term results.`,
       philosophy: [
-        "We always strive to achieve predictable long-term results through disciplined execution and design excellence.",
-        "Every development we undertake is an investment in the permanence of place—physically, aesthetically, and economically.",
-        "We do not build for today. We build for the generations who will inherit our work.",
+        "We aim to set the benchmark in excellence in project development by taking a holistic and integrated approach.",
+        "We always strive to achieve predictable, long-term results rather than pursue rapid, short-term growth.",
+        "The right mix of planning, monitoring, and controlling can make the difference in completing a project on time, on budget, and with high quality results.",
       ],
       entities: [
         {
@@ -40,7 +40,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
     stats: [
       { value: "1.3M+", label: "SQM Under Development" },
       { value: "10", label: "Flagship Projects" },
-      { value: "3", label: "Countries" },
+      { value: "2", label: "Countries" },
       { value: "6", label: "Service Pillars" },
     ],
     services: [
@@ -98,7 +98,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
     },
     ui: {
       hero: {
-        subtitle: "Real Estate Development & Advisory — KSA · UAE · East Africa",
+        subtitle: "Real Estate Development & Advisory — KSA · UAE",
         ctaPrimary: "Explore Our Projects",
         ctaSecondary: "About Zawya",
         scroll: "Scroll",
@@ -113,15 +113,15 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       projectsSection: {
         number: "03",
         label: "Portfolio",
-        title: "Selected projects across three continents",
+        title: "Selected projects across KSA and UAE",
         description: "A portfolio spanning hospitality, mixed-use, infrastructure, and branded residences.",
         viewAll: "View All Projects",
         pageHeader: "Ten flagship developments. Over 1.3 million square meters.",
-        pageDescription: "From five-star hotels to large-scale infrastructure, our portfolio represents the breadth and depth of our development expertise across the GCC and East Africa.",
+        pageDescription: "From five-star hotels to large-scale infrastructure, our portfolio represents the breadth and depth of our development expertise across the GCC.",
       },
       partners: { label: "Trusted By Industry Leaders" },
       cta: {
-        label: "Let's Build Together",
+        label: "Get In Touch",
         title: "Partner with a team that delivers predictable, long-term results.",
         description: "Whether you're an investor, landowner, or operator, we bring the expertise to transform your vision into a landmark.",
         button: "Get in Touch",
@@ -150,7 +150,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
         coordinates: "Coordinates",
         scope: "Scope of Work",
         nextProject: "Next Project",
-        quote: "We do not build for today. We build for the generations who will inherit our work.",
+        quote: "We aim to set the benchmark in excellence in project development by taking a holistic and integrated approach.",
       },
       servicesPage: {
         number: "01",
@@ -176,15 +176,13 @@ Our team brings direct experience in hotel development, operator negotiation, pr
         thankYouMsg: "Your message has been received. Our team will be in touch shortly.",
         offices: "Offices",
         emailLabel: "Email",
-        responseTime: "Response Time",
-        responseTimeValue: "We typically respond within 24–48 hours.",
       },
       navbar: { menu: "Menu", close: "Close", locations: "Riyadh — Dubai" },
       footer: {
         navigate: "Navigate",
         offices: "Offices",
         copyright: "© 2026 Zawya Developments. All rights reserved.",
-        regions: "KSA — UAE — TZA",
+        regions: "KSA — UAE",
       },
     },
   },
@@ -192,18 +190,18 @@ Our team brings direct experience in hotel development, operator negotiation, pr
     company: {
       name: "زاوية",
       fullName: "زاوية للتطوير العقاري",
-      tagline: "المواءمة بين نجاح التطوير والتميز في التصميم",
+      tagline: "المواءمة بين نجاح التطوير العقاري وتميّز التصميم المعماري",
       shortDescription:
         "شركة رائدة في التطوير والاستشارات العقارية مقرها في المملكة العربية السعودية، مع كيان شريك استراتيجي في دبي.",
-      aboutText: `زاوية للتطوير شركة رائدة في التطوير والاستشارات العقارية، يقع مقرها الرئيسي في الرياض، المملكة العربية السعودية، مع كيان شريك استراتيجي — CCGi الشرق الأوسط — في دبي، الإمارات العربية المتحدة. نحن نوائم بين نجاح التطوير والتميز في التصميم، مقدّمين مشاريع بارزة في جميع أنحاء المملكة العربية السعودية والإمارات العربية المتحدة وشرق أفريقيا.
+      aboutText: `زاوية للتطوير شركة رائدة في التطوير والاستشارات العقارية، يقع مقرها الرئيسي في الرياض، المملكة العربية السعودية، مع كيان شريك استراتيجي — CCGi الشرق الأوسط — في دبي، الإمارات العربية المتحدة. نحن نوائم بين نجاح التطوير والتميز في التصميم، مقدّمين مشاريع بارزة في جميع أنحاء المملكة العربية السعودية والإمارات العربية المتحدة.
 
 نهجنا المتكامل يشمل دورة حياة العقار بالكامل — من تحديد الأراضي ودراسات الجدوى إلى إدارة التصميم والبناء والتشغيل وإدارة المرافق. نحن نشارك مع أهم العلامات الفندقية في العالم والمستثمرين المؤسسيين والجهات الحكومية لخلق تطويرات تدوم.
 
-مع أكثر من 1.3 مليون متر مربع من المساحات المطورة عبر عشرة مشاريع رئيسية، تقف زاوية كشريك موثوق لـ IHG ووزارة الاستثمار السعودية وإيغل هيلز وغيرها من قادة الصناعة الذين يشاركوننا التزامنا بالنزاهة المعمارية والنتائج طويلة الأجل القابلة للتنبؤ.`,
+مع أكثر من 1.3 مليون متر مربع قيد التطوير عبر عشرة مشاريع رئيسية، تقف زاوية كشريك موثوق لـ IHG ووزارة الاستثمار السعودية وإيغل هيلز وغيرها من قادة الصناعة الذين يشاركوننا التزامنا بالنزاهة المعمارية والنتائج طويلة الأجل.`,
       philosophy: [
-        "نسعى دائماً لتحقيق نتائج طويلة الأجل قابلة للتنبؤ من خلال التنفيذ المنضبط والتميز في التصميم.",
-        "كل تطوير نقوم به هو استثمار في ديمومة المكان — مادياً وجمالياً واقتصادياً.",
-        "نحن لا نبني لليوم. نبني للأجيال التي سترث أعمالنا.",
+        "نطمح إلى أن نكون النموذج الرائد في التميز التطويري، من خلال منهجية متكاملة وشاملة.",
+        "نسعى دائماً إلى تحقيق نتائج مستدامة وطويلة الأمد، بعيداً عن استراتيجيات النمو المتسارع قصيرة المدى.",
+        "نجاح أي مشروع يقوم على تكامل ثلاثي: التخطيط المحكم، المتابعة المستمرة، والرقابة الفعالة. لضمان الإنجاز في الوقت المحدد، وفي حدود الميزانية، وبجودة لا تُضاهى.",
       ],
       entities: [
         {
@@ -219,52 +217,52 @@ Our team brings direct experience in hotel development, operator negotiation, pr
           description: "كيان شريك استراتيجي يقدم خبرة هيكلة الاستثمارات وإدارة الصناديق وتكوين رأس المال عبر الأسواق الدولية.",
         },
       ],
-      hospitalityExperience: `تمتد محفظتنا الضيافة لتشمل شراكات مع أهم مشغلي الفنادق في العالم، بما في ذلك IHG وأكور ودوسيت. من فنادق المدينة ذات الخمس نجوم إلى الإقامات المصنّفة فائقة الفخامة، نحن نفهم المتطلبات التشغيلية والمالية والتصميمية التي تحدد التميز في الضيافة.
+      hospitalityExperience: `تمتد محفظتنا الضيافية لتشمل شراكات مع أهم مشغلي الفنادق في العالم، بما في ذلك IHG وأكور ودوسيت. من فنادق المدينة ذات الخمس نجوم إلى الإقامات المصنّفة فائقة الفخامة، نحن نفهم المتطلبات التشغيلية والمالية والتصميمية التي تحدد التميز في الضيافة.
 
 يجلب فريقنا خبرة مباشرة في تطوير الفنادق والتفاوض مع المشغلين والتنسيق قبل الافتتاح وإدارة الأصول — مما يضمن أن كل أصل ضيافة يؤدي بكامل إمكاناته من اليوم الأول.`,
     },
     stats: [
       { value: "+1.3M", label: "م² قيد التطوير" },
       { value: "10", label: "مشاريع رئيسية" },
-      { value: "3", label: "دول" },
+      { value: "2", label: "دول" },
       { value: "6", label: "ركائز خدمية" },
     ],
     services: [
       {
         number: "01",
-        name: "التطوير",
+        name: "التطوير العقاري",
         description: "تطوير عقاري شامل من الرؤية إلى التسليم، يشمل تحديد الأراضي وتكوين المفاهيم والهيكلة المالية وتحقيق المشاريع.",
         subServices: ["تحديد الأراضي والاستحواذ", "تطوير المفاهيم والرؤى", "الهيكلة المالية وتكوين رأس المال", "إدارة التطوير", "استراتيجية الخروج وتحقيق القيمة"],
       },
       {
         number: "02",
-        name: "إدارة التصميم",
+        name: "إدارة التصاميم",
         description: "انتقاء وإدارة فرق تصميم عالمية لضمان التميز المعماري في كل مرحلة من مراحل عملية التطوير.",
         subServices: ["اختيار وإدارة المعماريين", "تطوير دليل التصميم", "التنسيق الفني", "هندسة القيمة", "دمج الاستدامة", "ضمان جودة التصميم"],
       },
       {
         number: "03",
-        name: "التشغيل",
+        name: "التشغيل والإدارة",
         description: "خدمات تشغيل الضيافة والأصول الشاملة التي تعظم الأداء وتجربة النزلاء وقيمة الأصول على المدى الطويل.",
-        subServices: ["تشغيل الضيافة", "إدارة الأصول", "التنسيق مع المشغلين", "تحسين الإيرادات", "استراتيجية تجربة النزلاء"],
+        subServices: ["تقييم واختيار المشغل", "مفاوضات العقود", "مؤشرات الأداء", "تحسين الإيرادات", "استراتيجية تجربة النزلاء"],
       },
       {
         number: "04",
-        name: "دراسة الجدوى",
+        name: "جدوى المشروع",
         description: "تحليل سوقي ومالي صارم للتحقق من كل قرار استثماري قبل الالتزام برأس المال.",
-        subServices: ["البحث والتحليل السوقي", "النمذجة المالية", "تقييم المخاطر", "تقييم الاستثمار", "تحسين العائد على الاستثمار"],
+        subServices: ["دراسات الجدوى", "التحقق والتقييم", "التحليل المالي", "تحليل الاستخدام الأعلى والأفضل للأرض"],
       },
       {
         number: "05",
         name: "إدارة المشاريع",
         description: "تنفيذ منضبط للمشاريع — التحكم في الوقت والتكلفة والجودة من وضع الأساس حتى التسليم.",
-        subServices: ["إدارة البناء", "التحكم في التكاليف", "إدارة الجداول الزمنية", "ضمان الجودة", "الامتثال للصحة والسلامة", "إدارة المشتريات"],
+        subServices: ["إدارة برنامج المشروع", "الإشراف على إدارة المشاريع", "إدارة أعمال البناء", "الجدولة الزمنية للمشروع", "مراقبة الميزانية والتكاليف"],
       },
       {
         number: "06",
         name: "إدارة المرافق",
         description: "إدارة طويلة الأجل للأصول المبنية للحفاظ على القيمة والكفاءة ورضا شاغليها طوال دورة حياة الأصل.",
-        subServices: ["صيانة الأصول", "تحسين العمليات", "إدارة الطاقة", "خدمات المستأجرين", "تخطيط دورة الحياة"],
+        subServices: ["تخطيط إدارة المباني والمرافق", "تخطيط أعمال الصيانة", "مراجعة كفاءة المبنى التشغيلية"],
       },
     ],
     partners: ["IHG", "أكور", "دوسيت", "DP World", "بلوم إنفيست", "إيغل هيلز", "وزارة الاستثمار", "RCMC", "TDF"],
@@ -284,30 +282,30 @@ Our team brings direct experience in hotel development, operator negotiation, pr
     },
     ui: {
       hero: {
-        subtitle: "التطوير والاستشارات العقارية — السعودية · الإمارات · شرق أفريقيا",
+        subtitle: "التطوير والاستشارات العقارية — السعودية · الإمارات",
         ctaPrimary: "استكشف مشاريعنا",
         ctaSecondary: "عن زاوية",
         scroll: "اسحب",
       },
       servicesSection: {
         number: "02",
-        label: "ماذا نقدم",
+        label: "نطاق أعمالنا",
         title: "ست ركائز للخبرة العقارية المتكاملة",
         description: "من تحديد الأراضي إلى إدارة المرافق، نحن نغطي دورة حياة التطوير العقاري بالكامل.",
         viewAll: "عرض جميع الخبرات",
       },
       projectsSection: {
         number: "03",
-        label: "محفظة المشاريع",
-        title: "مشاريع مختارة عبر ثلاث قارات",
+        label: "المشاريع البارزة",
+        title: "مشاريع مختارة في السعودية والإمارات",
         description: "محفظة تضم الضيافة والمشاريع المختلطة والبنية التحتية والإقامات المصنّفة.",
         viewAll: "عرض جميع المشاريع",
         pageHeader: "عشرة مشاريع رئيسية. أكثر من 1.3 مليون متر مربع.",
-        pageDescription: "من فنادق الخمس نجوم إلى البنية التحتية واسعة النطاق، تمثل محفظتنا اتساع وعمق خبرتنا في التطوير عبر الخليج وشرق أفريقيا.",
+        pageDescription: "من فنادق الخمس نجوم إلى البنية التحتية واسعة النطاق، تمثل محفظتنا اتساع وعمق خبرتنا في التطوير عبر الخليج.",
       },
-      partners: { label: "موثوق به من قادة الصناعة" },
+      partners: { label: "خبرة في التعاون مع كبرى الشركات العالمية" },
       cta: {
-        label: "لنبني معاً",
+        label: "تواصل معنا",
         title: "شارك مع فريق يحقق نتائج طويلة الأجل قابلة للتنبؤ.",
         description: "سواء كنت مستثمراً أو مالك أرض أو مشغّلاً، نحن نقدم الخبرة لتحويل رؤيتك إلى معلم بارز.",
         button: "تواصل معنا",
@@ -318,10 +316,10 @@ Our team brings direct experience in hotel development, operator negotiation, pr
         storyLabel: "01 / قصتنا",
         philosophyLabel: "02 / الفلسفة",
         structureNumber: "03",
-        structureLabel: "الهيكل",
+        structureLabel: "هيكلية الشراكة",
         structureTitle: "شراكة ذات كيانين عبر السعودية والإمارات",
         structureDescription: "كيانان، رؤية واحدة — تجمع بين خبرة التطوير وقدرات الاستثمار وإدارة الصناديق.",
-        hospitalityLabel: "04 / الضيافة",
+        hospitalityLabel: "04 / خبرة الضيافة",
         hospitalityTitle: "خبرة ضيافة مبنية على شراكات عالمية.",
         partnerLink: "شارك معنا",
       },
@@ -334,9 +332,9 @@ Our team brings direct experience in hotel development, operator negotiation, pr
         area: "المساحة",
         partner: "الشريك",
         coordinates: "الإحداثيات",
-        scope: "نطاق العمل",
+        scope: "نطاق الأعمال",
         nextProject: "المشروع التالي",
-        quote: "نحن لا نبني لليوم. نبني للأجيال التي سترث أعمالنا.",
+        quote: "نطمح إلى أن نكون النموذج الرائد في التميز التطويري، من خلال منهجية متكاملة وشاملة.",
       },
       servicesPage: {
         number: "01",
@@ -362,15 +360,13 @@ Our team brings direct experience in hotel development, operator negotiation, pr
         thankYouMsg: "تم استلام رسالتك. سيتواصل فريقنا معك قريباً.",
         offices: "المكاتب",
         emailLabel: "البريد الإلكتروني",
-        responseTime: "وقت الاستجابة",
-        responseTimeValue: "نرد عادةً خلال 24–48 ساعة.",
       },
       navbar: { menu: "القائمة", close: "إغلاق", locations: "الرياض — دبي" },
       footer: {
         navigate: "تصفح",
         offices: "المكاتب",
         copyright: "© 2026 زاوية للتطوير. جميع الحقوق محفوظة.",
-        regions: "السعودية — الإمارات — تنزانيا",
+        regions: "السعودية — الإمارات",
       },
     },
   },

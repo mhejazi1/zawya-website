@@ -7,7 +7,7 @@ import AnimatedLine from "@/components/AnimatedLine";
 import { content } from "@/data/content";
 import { useLanguage } from "@/lib/LanguageContext";
 
-const ABOUT_HERO = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/417e040fe_generated_image.png";
+const ABOUT_HERO = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/2a6cf8d1e_image47.jpeg";
 
 export default function About() {
   const { lang } = useLanguage();
@@ -16,6 +16,7 @@ export default function About() {
 
   return (
     <div className="pt-20">
+      {/* Hero */}
       <section className="relative h-[55vh] md:h-[70vh] min-h-[400px] overflow-hidden bg-charcoal">
         <motion.img
           src={ABOUT_HERO}
@@ -48,44 +49,52 @@ export default function About() {
         </div>
       </section>
 
+      {/* Story */}
       <section className="py-20 md:py-32 px-6 md:px-10 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-3">
-            <span className="technical text-sage">{ui.storyLabel}</span>
+            <Reveal>
+              <span className="technical text-sage">{ui.storyLabel}</span>
+            </Reveal>
           </div>
           <div className="md:col-span-9">
-            <Reveal>
-              {t.company.aboutText.split("\n\n").map((para, i) => (
-                <p
-                  key={i}
-                  className={`text-lg md:text-xl leading-relaxed text-foreground/80 mb-6 last:mb-0 ${
-                    i === 0 ? "text-foreground font-medium" : ""
-                  }`}
-                >
+            {t.company.aboutText.split("\n\n").map((para, i) => (
+              <Reveal key={i} delay={i * 0.1}>
+                <p className={`text-lg md:text-xl leading-relaxed text-foreground/80 mb-6 last:mb-0 ${i === 0 ? "text-foreground font-medium" : ""}`}>
                   {para}
                 </p>
-              ))}
-            </Reveal>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
 
+      {/* Philosophy */}
       <section className="py-20 md:py-32 px-6 md:px-10 lg:px-16 bg-muted/30">
         <AnimatedLine className="mb-16 md:mb-20" />
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <Reveal>
-            <span className="technical text-sage block mb-12 md:mb-16 text-center">{ui.philosophyLabel}</span>
+            <span className="technical text-sage block mb-16 md:mb-20 text-center">{ui.philosophyLabel}</span>
           </Reveal>
-          {t.company.philosophy.map((quote, i) => (
-            <Reveal key={i} delay={i * 0.15}>
-              <blockquote className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-center mb-12 md:mb-16 last:mb-0 text-balance display-serif leading-[1.15]">
-                &ldquo;{quote}&rdquo;
-              </blockquote>
-            </Reveal>
-          ))}
+          <div className="space-y-16 md:space-y-24">
+            {t.company.philosophy.map((quote, i) => (
+              <Reveal key={i} delay={i * 0.15}>
+                <div className="relative">
+                  <span className="technical text-sage/40 block mb-4 text-center">0{i + 1}</span>
+                  <blockquote className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-center text-balance display-serif leading-[1.2] text-foreground">
+                    &ldquo;{quote}&rdquo;
+                  </blockquote>
+                  {i < t.company.philosophy.length - 1 && (
+                    <div className="mt-16 md:mt-24 h-px w-24 mx-auto bg-sage/20" />
+                  )}
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
+      {/* Structure */}
       <section className="py-20 md:py-32 px-6 md:px-10 lg:px-16">
         <AnimatedLine className="mb-16 md:mb-20" />
         <SectionHeader
@@ -111,10 +120,13 @@ export default function About() {
         </div>
       </section>
 
+      {/* Hospitality */}
       <section className="py-20 md:py-32 px-6 md:px-10 lg:px-16 bg-charcoal text-white">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-4">
-            <span className="technical text-white/40">{ui.hospitalityLabel}</span>
+            <Reveal>
+              <span className="technical text-white/40">{ui.hospitalityLabel}</span>
+            </Reveal>
           </div>
           <div className="md:col-span-8">
             <Reveal>

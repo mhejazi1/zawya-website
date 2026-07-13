@@ -252,9 +252,17 @@
     animation-play-state: paused;
   }
   .wave-gradient {
-    background: linear-gradient(90deg, hsl(160 11% 35%), hsl(40 10% 97%), hsl(160 11% 45%), hsl(40 10% 97%), hsl(160 11% 35%));
-    background-size: 200% 100%;
-    animation: waveFlow 3s linear infinite;
+    background: linear-gradient(90deg,
+      hsl(160 11% 28%),
+      hsl(160 11% 55%),
+      hsl(40 10% 90%),
+      hsl(160 11% 60%),
+      hsl(160 11% 35%),
+      hsl(40 10% 85%),
+      hsl(160 11% 28%)
+    );
+    background-size: 300% 100%;
+    animation: waveFlow 4s linear infinite;
   }
 }
 
@@ -265,5 +273,5 @@
 
 @keyframes waveFlow {
   0% { background-position: 0% 50%; }
-  100% { background-position: 200% 50%; }
+  100% { background-position: 300% 50%; }
 }

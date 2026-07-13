@@ -4,7 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { content } from "@/data/content";
 import { useLanguage } from "@/lib/LanguageContext";
 
-const HERO_IMAGE = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/8d24a79fe_image78.png";
+// IHG Crowne Plaza Jeddah — the main hero image per portfolio
+const HERO_IMAGE = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/2a6cf8d1e_image47.jpeg";
 
 export default function HeroSection() {
   const { lang } = useLanguage();
@@ -18,7 +19,7 @@ export default function HeroSection() {
     <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-charcoal">
       <motion.div className="absolute inset-0" style={{ scale }}>
         <img src={HERO_IMAGE} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/20" />
       </motion.div>
 
       <motion.div
@@ -31,34 +32,29 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
             className="technical text-white/50 block mb-6 text-sm">
-            
             {t.subtitle}
           </motion.span>
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-bold tracking-tight leading-[0.95] text-balance text-4xl md:text-4xl lg:text-4xl xl:text-4xl [font-family:'Blauer_Nue',_'Dubai',_ui-sans-serif,_system-ui,_sans-serif]">
-            
+            transition={{ delay: 0.6, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="font-bold tracking-tight leading-[0.95] text-balance text-4xl md:text-5xl lg:text-6xl text-white [font-family:'Blauer_Nue',_'Dubai',_ui-sans-serif,_system-ui,_sans-serif]">
             {content[lang].company.tagline}
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9, duration: 0.8 }}
+            transition={{ delay: 1.0, duration: 0.8 }}
             className="mt-10 flex flex-col sm:flex-row gap-4">
-            
             <Link
               to="/projects"
               className="group inline-flex items-center justify-center gap-3 bg-white text-charcoal px-8 py-4 text-sm font-medium tracking-wide hover:bg-sage hover:text-white transition-colors duration-300">
-              
               {t.ctaPrimary}
               <ArrowRight size={16} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform rtl:rotate-180" />
             </Link>
             <Link
               to="/about"
               className="inline-flex items-center justify-center gap-3 border border-white/30 text-white px-8 py-4 text-sm font-medium tracking-wide hover:bg-white/10 transition-colors duration-300">
-              
               {t.ctaSecondary}
             </Link>
           </motion.div>
@@ -68,10 +64,9 @@ export default function HeroSection() {
       <motion.div
         style={{ opacity }}
         className="absolute bottom-8 right-6 md:right-10 lg:right-16 flex flex-col items-center gap-3">
-        
         <span className="technical text-white/40 [writing-mode:vertical-rl] rotate-180 rtl:[writing-mode:vertical-lr] rtl:rotate-0">{t.scroll}</span>
         <div className="w-px h-12 bg-white/30" />
       </motion.div>
-    </section>);
-
+    </section>
+  );
 }
