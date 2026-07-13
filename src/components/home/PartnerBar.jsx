@@ -16,26 +16,21 @@ const PARTNER_LOGOS = [
 export default function PartnerBar() {
   const { lang } = useLanguage();
   const t = content[lang];
-  const logos = [...PARTNER_LOGOS, ...PARTNER_LOGOS];
 
   return (
-    <section className="py-16 md:py-20 bg-background overflow-hidden">
-      <div className="max-w-7xl mx-auto mb-10 px-6 md:px-10 lg:px-16">
-        <span className="technical text-muted-foreground block text-center">
+    <section className="py-16 md:py-20 bg-background">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+        <span className="technical text-muted-foreground block text-center mb-10 md:mb-14">
           {t.ui.partners.label}
         </span>
-      </div>
-      <div className="relative">
-        <div className="flex marquee-track" dir="ltr">
-          {logos.map((partner, i) => (
-            <div
-              key={i}
-              className="flex-shrink-0 flex items-center justify-center px-8 md:px-12 min-w-[200px] md:min-w-[240px]"
-            >
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10 md:gap-y-14 items-center justify-items-center">
+          {PARTNER_LOGOS.map((partner) => (
+            <div key={partner.name} className="flex items-center justify-center h-16 md:h-20 w-full px-2">
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="h-12 md:h-14 w-auto object-contain"
+                title={partner.name}
+                className="h-full w-auto max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
               />
             </div>
           ))}
