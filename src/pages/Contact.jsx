@@ -15,7 +15,7 @@ export default function Contact() {
     company: "",
     email: "",
     subject: ui.subjects[0],
-    message: "",
+    message: ""
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -38,80 +38,80 @@ export default function Contact() {
           number={ui.number}
           label={ui.label}
           title={ui.title}
-          description={ui.description}
-        />
+          description={ui.description} />
+        
       </section>
 
       <section className="px-6 md:px-10 lg:px-16 pb-20 md:pb-32">
         <AnimatedLine className="mb-12 md:mb-16" />
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-16">
           <div className="lg:col-span-8">
-            {submitted ? (
-              <Reveal>
+            {submitted ?
+            <Reveal>
                 <div className="border border-sage p-12 md:p-16 text-center">
                   <h3 className="text-2xl md:text-3xl font-bold mb-3 tracking-tight">{ui.thankYou}</h3>
                   <p className="text-muted-foreground max-w-md mx-auto">{ui.thankYouMsg}</p>
                 </div>
-              </Reveal>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-8">
+              </Reveal> :
+
+            <form onSubmit={handleSubmit} className="space-y-8 hidden">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <label className="technical text-muted-foreground block mb-2">{ui.name}</label>
                     <input type="text" name="name" required value={form.name} onChange={handleChange}
-                      className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors" />
+                  className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors" />
                   </div>
                   <div>
                     <label className="technical text-muted-foreground block mb-2">{ui.company}</label>
                     <input type="text" name="company" value={form.company} onChange={handleChange}
-                      className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors" />
+                  className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors" />
                   </div>
                 </div>
                 <div>
                   <label className="technical text-muted-foreground block mb-2">{ui.email}</label>
                   <input type="email" name="email" required value={form.email} onChange={handleChange}
-                    className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors" />
+                className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors" />
                 </div>
                 <div>
                   <label className="technical text-muted-foreground block mb-2">{ui.subject}</label>
                   <select name="subject" value={form.subject} onChange={handleChange}
-                    className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors appearance-none cursor-pointer">
-                    {ui.subjects.map((subject) => (
-                      <option key={subject}>{subject}</option>
-                    ))}
+                className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors appearance-none cursor-pointer">
+                    {ui.subjects.map((subject) =>
+                  <option key={subject}>{subject}</option>
+                  )}
                   </select>
                 </div>
                 <div>
                   <label className="technical text-muted-foreground block mb-2">{ui.message}</label>
                   <textarea name="message" required rows={5} value={form.message} onChange={handleChange}
-                    className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors resize-none" />
+                className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors resize-none" />
                 </div>
                 <button type="submit" disabled={loading}
-                  className="group inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 text-sm font-medium tracking-wide hover:bg-sage transition-colors duration-300 disabled:opacity-50">
+              className="group inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 text-sm font-medium tracking-wide hover:bg-sage transition-colors duration-300 disabled:opacity-50">
                   {loading ? ui.sending : ui.send}
                   {!loading && <ArrowRight size={16} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform rtl:rotate-180" />}
                 </button>
               </form>
-            )}
+            }
           </div>
 
           <div className="lg:col-span-4 space-y-10">
             <Reveal>
               <div>
                 <span className="technical text-sage block mb-5">{ui.offices}</span>
-                {t.contactInfo.entities.map((entity) => (
-                  <div key={entity.name} className="mb-5">
+                {t.contactInfo.entities.map((entity) =>
+                <div key={entity.name} className="mb-5">
                     <p className="font-medium text-sm">{entity.name}</p>
                     <p className="text-muted-foreground text-sm mt-1">{entity.address}</p>
                   </div>
-                ))}
+                )}
               </div>
             </Reveal>
             <Reveal delay={0.1}>
               <div>
                 <span className="technical text-sage block mb-5">{ui.emailLabel}</span>
                 <a href={`mailto:${t.contactInfo.email}`}
-                  className="text-sm hover:text-sage transition-colors border-b border-border pb-1">
+                className="text-sm hover:text-sage transition-colors border-b border-border pb-1">
                   {t.contactInfo.email}
                 </a>
               </div>
@@ -119,6 +119,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 }
