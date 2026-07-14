@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import AnimatedLine from "@/components/AnimatedLine";
 import { content } from "@/data/content";
@@ -13,27 +12,6 @@ export default function Contact() {
   const { lang } = useLanguage();
   const t = content[lang];
   const ui = t.ui.contact;
-  const [form, setForm] = useState({
-    name: "",
-    company: "",
-    email: "",
-    subject: ui.subjects[0],
-    message: ""
-  });
-
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const subject = encodeURIComponent(`${form.subject} — ${form.name}${form.company ? ` (${form.company})` : ""}`);
-    const body = encodeURIComponent(
-      `${form.message}\n\n—\n${form.name}${form.company ? `\n${form.company}` : ""}\n${form.email}`
-    );
-    window.location.href = `mailto:${t.contactInfo.email}?subject=${subject}&body=${body}`;
-  };
-
-  const inputClass =
-    "w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors placeholder:text-muted-foreground/40";
 
   return (
     <div className="pt-20">
@@ -127,86 +105,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Form */}
-        <div className="mt-16 md:mt-24 max-w-3xl">
-          <Reveal>
-            <form onSubmit={handleSubmit} className="space-y-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                  <div>
-                    <label className="technical text-sage block mb-3">{ui.name}</label>
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      value={form.name}
-                      onChange={handleChange}
-                      placeholder="—"
-                      className={inputClass}
-                    />
-                  </div>
-                  <div>
-                    <label className="technical text-sage block mb-3">{ui.company}</label>
-                    <input
-                      type="text"
-                      name="company"
-                      value={form.company}
-                      onChange={handleChange}
-                      placeholder="—"
-                      className={inputClass}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="technical text-sage block mb-3">{ui.email}</label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="—"
-                    className={inputClass}
-                  />
-                </div>
-                <div>
-                  <label className="technical text-sage block mb-3">{ui.subject}</label>
-                  <select
-                    name="subject"
-                    value={form.subject}
-                    onChange={handleChange}
-                    className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors appearance-none cursor-pointer"
-                  >
-                    {ui.subjects.map((subject) => (
-                      <option key={subject}>{subject}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label className="technical text-sage block mb-3">{ui.message}</label>
-                  <textarea
-                    name="message"
-                    required
-                    rows={5}
-                    value={form.message}
-                    onChange={handleChange}
-                    placeholder="—"
-                    className={`${inputClass} resize-none`}
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="group inline-flex items-center gap-3 bg-foreground text-background px-10 py-5 text-sm font-medium tracking-wide hover:bg-sage transition-colors duration-300"
-                >
-                  {ui.send}
-                  <ArrowRight
-                    size={16}
-                    strokeWidth={1.5}
-                    className="group-hover:translate-x-1 transition-transform rtl:rotate-180"
-                  />
-                </button>
-              </form>
-            </Reveal>
-        </div>
+
       </section>
     </div>
   );
