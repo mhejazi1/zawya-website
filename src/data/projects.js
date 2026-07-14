@@ -107,7 +107,7 @@ export const projects = [
     unitsLabel_ar: "قطعة",
     partner: "RCMC",
     coordinates: "24.7136°N 46.6753°E",
-    featured: false,
+    featured: true,
     gridSpan: "small",
     image: IMG.rcmc,
     gallery: [IMG.rcmc],
