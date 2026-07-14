@@ -20,23 +20,26 @@ export default function ServicesOverview() {
         title={s.title}
         description={s.description}
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
-        {t.services.map((service, i) => (
-          <Reveal key={service.name} delay={i * 0.05}>
-            <div className="bg-background p-8 md:p-10 h-full group hover:bg-muted/40 transition-colors duration-500">
-              <div className="flex items-start justify-between mb-6">
-                <span className="technical text-sage">{service.number}</span>
-                <ArrowUpRight
-                  size={18}
-                  strokeWidth={1.5}
-                  className="text-muted-foreground group-hover:text-sage group-hover:rotate-45 transition-all duration-500"
-                />
+      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-flow-col md:grid-rows-3 gap-px bg-border">
+        {t.services.map((service, i) => {
+          const isGreen = i % 2 !== 0;
+          return (
+            <Reveal key={service.name} delay={i * 0.05}>
+              <div className={`${isGreen ? "bg-sage text-white" : "bg-background"} p-8 md:p-10 h-full group transition-colors duration-500`}>
+                <div className="flex items-start justify-between mb-6">
+                  <span className={`technical ${isGreen ? "text-white/50" : "text-sage"}`}>{service.number}</span>
+                  <ArrowUpRight
+                    size={18}
+                    strokeWidth={1.5}
+                    className={`${isGreen ? "text-white/50" : "text-muted-foreground"} group-hover:rotate-45 transition-all duration-500`}
+                  />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold mb-3 tracking-tight">{service.name}</h3>
+                <p className={`text-sm leading-relaxed ${isGreen ? "text-white/60" : "text-muted-foreground"}`}>{service.description}</p>
               </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-3 tracking-tight">{service.name}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
-            </div>
-          </Reveal>
-        ))}
+            </Reveal>
+          );
+        })}
       </div>
       <div className="mt-12">
         <Link

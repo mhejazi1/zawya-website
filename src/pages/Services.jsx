@@ -23,38 +23,41 @@ export default function Services() {
       <section className="px-6 md:px-10 lg:px-16 pb-20 md:pb-32">
         <AnimatedLine className="mb-12 md:mb-16" />
         <div className="space-y-px bg-border">
-          {t.services.map((service, i) => (
-            <Reveal key={service.name}>
-              <div className="bg-background p-8 md:p-12 group hover:bg-muted/30 transition-colors duration-500">
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
-                  <div className="md:col-span-1">
-                    <span className="technical text-sage">{service.number}</span>
-                  </div>
-                  <div className="md:col-span-4">
-                    <h3 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-tight mb-3">
-                      {service.name}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                  <div className="md:col-span-7">
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
-                      {service.subServices.map((sub, j) => (
-                        <li
-                          key={j}
-                          className="text-sm text-foreground/70 flex items-start gap-2 py-1"
-                        >
-                          <span className="text-sage mt-0.5 flex-shrink-0">—</span>
-                          {sub}
-                        </li>
-                      ))}
-                    </ul>
+          {t.services.map((service, i) => {
+            const isGreen = i % 2 !== 0;
+            return (
+              <Reveal key={service.name}>
+                <div className={`${isGreen ? "bg-sage text-white" : "bg-background"} p-8 md:p-12 group transition-colors duration-500`}>
+                  <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+                    <div className="md:col-span-1">
+                      <span className={`technical ${isGreen ? "text-white/50" : "text-sage"}`}>{service.number}</span>
+                    </div>
+                    <div className="md:col-span-4">
+                      <h3 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-tight mb-3">
+                        {service.name}
+                      </h3>
+                      <p className={`text-sm leading-relaxed ${isGreen ? "text-white/60" : "text-muted-foreground"}`}>
+                        {service.description}
+                      </p>
+                    </div>
+                    <div className="md:col-span-7">
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
+                        {service.subServices.map((sub, j) => (
+                          <li
+                            key={j}
+                            className={`text-sm flex items-start gap-2 py-1 ${isGreen ? "text-white/70" : "text-foreground/70"}`}
+                          >
+                            <span className={`mt-0.5 flex-shrink-0 ${isGreen ? "text-white/50" : "text-sage"}`}>—</span>
+                            {sub}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            );
+          })}
         </div>
 
 
