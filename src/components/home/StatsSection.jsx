@@ -9,7 +9,7 @@ export default function StatsSection() {
   const stats = content[lang].stats;
 
   return (
-    <section className="bg-sage">
+    <section className="bg-[#52665B]">
       <WaveRibbon />
       <div className="py-20 md:py-32 px-6 md:px-10 lg:px-16">
         <div className="h-px w-full bg-white/20 mb-16 md:mb-24" />
