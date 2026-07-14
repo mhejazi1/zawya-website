@@ -25,7 +25,7 @@ export default function ServicesOverview() {
           const isGreen = i % 2 !== 0;
           return (
             <Reveal key={service.name} delay={i * 0.05}>
-              <div className={`${isGreen ? "bg-sage text-white" : "bg-background"} p-8 md:p-10 h-full group transition-colors duration-500`}>
+              <div className={`${isGreen ? "bg-[#93A89C] text-white" : "bg-background"} p-8 md:p-10 h-full group transition-colors duration-500`}>
                 <div className="flex items-start justify-between mb-6">
                   <span className={`technical ${isGreen ? "text-white/50" : "text-sage"}`}>{service.number}</span>
                   <ArrowUpRight
