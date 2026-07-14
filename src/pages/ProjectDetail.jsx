@@ -147,10 +147,10 @@ export default function ProjectDetail() {
                 {project.gallery.map((img, i) =>
               <Reveal key={i} delay={i * 0.1}>
                     <div className="overflow-hidden bg-muted">
-                      <img src="https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/c7256f805_image53.jpg"
+                      
 
-                  alt={`${tr(project, "name", lang)} — ${i + 1}`}
-                  className="w-full h-auto object-cover hidden" />
+
+                  
                   
                     </div>
                   </Reveal>
