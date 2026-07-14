@@ -48,7 +48,7 @@ export default function AnimatedPanel() {
       ))}
 
       {/* Tagline */}
-      <div className="relative z-10 text-center max-w-sm">
+      <div className="relative z-10 text-center max-w-lg w-full">
         <motion.div
           className="h-px w-12 bg-sage mx-auto mb-6"
           initial={{ scaleX: 0 }}
