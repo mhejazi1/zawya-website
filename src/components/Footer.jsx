@@ -10,13 +10,13 @@ export default function Footer() {
 
   return (
     <footer style={{ backgroundColor: "#f8f8f6" }}>
-      <div className="px-6 md:px-10 lg:px-16 py-16 md:py-24">
+      <div className="px-6 md:px-10 lg:px-16 pt-8 md:pt-10 pb-16 md:pb-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           <div className="md:col-span-5">
             <Link to="/" className="inline-flex items-center gap-3 mb-6">
               <img src={logoUrl} alt="Zawya" className="h-24 w-24 object-contain" />
             </Link>
-            <p style={{ color: DARK_GREEN }} className="text-sm leading-relaxed max-w-sm opacity-70">
+            <p style={{ color: DARK_GREEN }} className="text-sm leading-relaxed max-w-sm opacity-70 whitespace-pre-line">
               {t.company.tagline}
             </p>
             <div className="mt-8 flex gap-3">
