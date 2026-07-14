@@ -1,6 +1,6 @@
 // Portfolio images — one per project, matched from the uploaded PDF
 const IMG = {
-  ihgJeddah:   "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/2a6cf8d1e_image47.jpeg",
+  ihgJeddah:   "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/b01dd785f_crowne-plaza-jeddah-7087756169-2x1.png",
   makkah:      "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/c7256f805_image53.jpg",
   corniche:    "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/56819a7ef_image61.png",
   rcmc:        "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/df46a9b49_image65.png",

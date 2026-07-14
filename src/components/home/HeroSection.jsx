@@ -5,7 +5,7 @@ import { content } from "@/data/content";
 import { useLanguage } from "@/lib/LanguageContext";
 
 // IHG Crowne Plaza Jeddah — the main hero image per portfolio
-const HERO_IMAGE = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/2a6cf8d1e_image47.jpeg";
+const HERO_IMAGE = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/b01dd785f_crowne-plaza-jeddah-7087756169-2x1.png";
 
 export default function HeroSection() {
   const { lang } = useLanguage();
