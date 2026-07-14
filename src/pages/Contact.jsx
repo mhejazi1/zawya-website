@@ -7,7 +7,7 @@ import AnimatedLine from "@/components/AnimatedLine";
 import { content } from "@/data/content";
 import { useLanguage } from "@/lib/LanguageContext";
 
-const CONTACT_HERO = "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop";
+const CONTACT_HERO = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/10490ecb2_Riyadh_Skyline.jpg";
 
 export default function Contact() {
   const { lang } = useLanguage();

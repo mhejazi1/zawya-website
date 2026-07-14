@@ -63,9 +63,11 @@ export default function Footer() {
           <span style={{ color: DARK_GREEN }} className="technical opacity-40 text-xs">
             {t.ui.footer.copyright}
           </span>
-          <span style={{ color: DARK_GREEN }} className="technical opacity-40 text-xs">
-            {t.ui.footer.regions}
-          </span>
+          {t.ui.footer.regions && (
+            <span style={{ color: DARK_GREEN }} className="technical opacity-40 text-xs">
+              {t.ui.footer.regions}
+            </span>
+          )}
         </div>
       </div>
     </footer>

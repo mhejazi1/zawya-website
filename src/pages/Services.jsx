@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeader from "@/components/SectionHeader";
 import AnimatedLine from "@/components/AnimatedLine";
@@ -59,15 +57,7 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="mt-16 md:mt-24 text-center">
-          <Link
-            to="/contact"
-            className="group inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 text-sm font-medium tracking-wide hover:bg-sage transition-colors duration-300"
-          >
-            {s.cta}
-            <ArrowRight size={16} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform rtl:rotate-180" />
-          </Link>
-        </div>
+
       </section>
     </div>
   );

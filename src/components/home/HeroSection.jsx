@@ -6,6 +6,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 
 // IHG Crowne Plaza Jeddah — the main hero image per portfolio
 const HERO_IMAGE = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/b01dd785f_crowne-plaza-jeddah-7087756169-2x1.png";
+const HERO_IMAGE_MOBILE = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/424a0bfb4_Picture34.jpg";
 
 export default function HeroSection() {
   const { lang } = useLanguage();
@@ -18,7 +19,8 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-charcoal">
       <motion.div className="absolute inset-0" style={{ scale }}>
-        <img src={HERO_IMAGE} alt="" className="w-full h-full object-cover" />
+        <img src={HERO_IMAGE} alt="" className="w-full h-full object-cover hidden md:block" />
+        <img src={HERO_IMAGE_MOBILE} alt="" className="w-full h-full object-cover block md:hidden" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/20" />
       </motion.div>
 
