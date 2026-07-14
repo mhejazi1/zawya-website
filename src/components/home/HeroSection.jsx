@@ -19,8 +19,8 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-charcoal">
       <motion.div className="absolute inset-0" style={{ scale }}>
-        <img src={HERO_IMAGE} alt="" className="w-full h-full object-cover hidden md:block" />
-        <img src={HERO_IMAGE_MOBILE} alt="" className="w-full h-full object-cover block md:hidden" />
+        <img src={HERO_IMAGE} alt="" className="w-full h-full object-cover hidden lg:block" />
+        <img src={HERO_IMAGE_MOBILE} alt="" className="w-full h-[143%] object-cover object-top block lg:hidden" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/20" />
       </motion.div>
 
