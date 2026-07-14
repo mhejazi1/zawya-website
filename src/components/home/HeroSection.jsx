@@ -31,14 +31,14 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="technical text-white block mb-6 text-sm">
+            className="technical text-white block mb-6 text-xs">
             {t.subtitle}
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="font-bold tracking-tight leading-[1.1] whitespace-pre-line text-3xl md:text-4xl lg:text-5xl text-white [font-family:'Blauer_Nue',_'Dubai',_ui-sans-serif,_system-ui,_sans-serif]">
+            className="font-bold tracking-tight leading-[1.1] whitespace-pre-line text-white [font-family:'Blauer_Nue',_'Dubai',_ui-sans-serif,_system-ui,_sans-serif] text-2xl md:text-2xl lg:text-2xl">
             {content[lang].company.tagline}
           </motion.h1>
           <motion.div
@@ -67,6 +67,6 @@ export default function HeroSection() {
         <span className="technical text-white/40 [writing-mode:vertical-rl] rotate-180 rtl:[writing-mode:vertical-lr] rtl:rotate-0">{t.scroll}</span>
         <div className="w-px h-12 bg-white/30" />
       </motion.div>
-    </section>
-  );
+    </section>);
+
 }
