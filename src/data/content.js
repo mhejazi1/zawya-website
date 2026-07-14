@@ -92,8 +92,8 @@ Our team brings direct experience in hotel development, operator negotiation, pr
     contactInfo: {
       email: "info@zawyadevelopments.com",
       entities: [
-        { name: "Zawya Developments", address: "Prince Muhammad Bin Saad Rd\nHittin District\nRiyadh, Kingdom of Saudi Arabia" },
-        { name: "CCGi Middle East", address: "Sh Zayed Road\nTrade Center Area 1\nDubai, United Arab Emirates" },
+        { name: "Zawya Developments", address: "Prince Muhammad Bin Saad Rd\n13513, Hittin District\nRiyadh, Kingdom of Saudi Arabia" },
+        { name: "CCGi Middle East", address: "Sheikh Zayed Rd\n215166, Trade Center Area 1\nDubai, United Arab Emirates" },
       ],
     },
     ui: {
@@ -276,8 +276,8 @@ Our team brings direct experience in hotel development, operator negotiation, pr
     contactInfo: {
       email: "info@zawyadevelopments.com",
       entities: [
-        { name: "شركة زاوية للتطوير العقاري", address: "طريق الأمير محمد بن سعد\nحي حطين\nالرياض، المملكة العربية السعودية" },
-        { name: "CCGi الشرق الأوسط", address: "شارع الشيخ زايد\nمنطقة المركز التجاري 1\nدبي، الإمارات العربية المتحدة" },
+        { name: "شركة زاوية للتطوير العقاري", address: "طريق الأمير محمد بن سعد\n13513، حي حطين\nالرياض، المملكة العربية السعودية" },
+        { name: "CCGi الشرق الأوسط", address: "شارع الشيخ زايد\n215166، منطقة المركز التجاري 1\nدبي، الإمارات العربية المتحدة" },
       ],
     },
     ui: {
