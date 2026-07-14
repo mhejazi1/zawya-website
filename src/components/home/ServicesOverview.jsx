@@ -20,26 +20,23 @@ export default function ServicesOverview() {
         title={s.title}
         description={s.description}
       />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border">
-        {t.services.map((service, i) => {
-          const isGreen = i % 2 !== 0;
-          return (
-            <Reveal key={service.name} delay={i * 0.05}>
-              <div className={`${isGreen ? "bg-[#93A89C]" : "bg-background"} p-8 md:p-10 h-full group transition-colors duration-500`}>
-                <div className="flex items-start justify-between mb-6">
-                  <span className={`technical ${isGreen ? "text-sage" : "text-sage"}`}>{service.number}</span>
-                  <ArrowUpRight
-                    size={18}
-                    strokeWidth={1.5}
-                    className={`text-muted-foreground group-hover:rotate-45 transition-all duration-500`}
-                  />
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold mb-3 tracking-tight text-foreground">{service.name}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{service.description}</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
+        {t.services.map((service, i) => (
+          <Reveal key={service.name} delay={i * 0.05}>
+            <div className="bg-background p-8 md:p-10 h-full group transition-colors duration-500 hover:bg-secondary/50">
+              <div className="flex items-start justify-between mb-6">
+                <span className="technical text-sage">{service.number}</span>
+                <ArrowUpRight
+                  size={18}
+                  strokeWidth={1.5}
+                  className="text-muted-foreground group-hover:rotate-45 transition-all duration-500"
+                />
               </div>
-            </Reveal>
-          );
-        })}
+              <h3 className="text-xl md:text-2xl font-bold mb-3 tracking-tight text-foreground">{service.name}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">{service.description}</p>
+            </div>
+          </Reveal>
+        ))}
       </div>
       <div className="mt-12">
         <Link
