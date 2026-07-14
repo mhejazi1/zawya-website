@@ -92,8 +92,8 @@ Our team brings direct experience in hotel development, operator negotiation, pr
     contactInfo: {
       email: "info@zawyadevelopments.com",
       entities: [
-        { name: "Zawya Developments", address: "Riyadh, Kingdom of Saudi Arabia" },
-        { name: "CCGi Middle East", address: "Dubai, United Arab Emirates" },
+        { name: "Zawya Developments", address: "Prince Muhammad Bin Saad Rd\nHittin District\nRiyadh, Kingdom of Saudi Arabia" },
+        { name: "CCGi Middle East", address: "Sh Zayed Road\nTrade Center Area 1\nDubai, United Arab Emirates" },
       ],
     },
     ui: {
@@ -162,8 +162,8 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       contact: {
         number: "01",
         label: "Contact",
-        title: "Get in touch with Zawya.",
-        description: "We welcome your inquiries and look forward to connecting with you.",
+        title: "Get in touch with Zawya",
+        description: "We welcome your inquiries and look forward to connecting with you",
         name: "Name",
         company: "Company",
         email: "Email",
@@ -276,8 +276,8 @@ Our team brings direct experience in hotel development, operator negotiation, pr
     contactInfo: {
       email: "info@zawyadevelopments.com",
       entities: [
-        { name: "شركة زاوية للتطوير العقاري", address: "الرياض، المملكة العربية السعودية" },
-        { name: "CCGi الشرق الأوسط", address: "دبي، الإمارات العربية المتحدة" },
+        { name: "شركة زاوية للتطوير العقاري", address: "طريق الأمير محمد بن سعد\nحي حطين\nالرياض، المملكة العربية السعودية" },
+        { name: "CCGi الشرق الأوسط", address: "شارع الشيخ زايد\nمنطقة المركز التجاري 1\nدبي، الإمارات العربية المتحدة" },
       ],
     },
     ui: {
@@ -346,8 +346,8 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       contact: {
         number: "01",
         label: "تواصل",
-        title: "تواصل مع زاوية.",
-        description: "نرحب باستفساراتكم ونتطلع إلى التواصل معكم.",
+        title: "تواصل مع زاوية",
+        description: "نرحب باستفساراتكم ونتطلع إلى التواصل معكم",
         name: "الاسم",
         company: "الشركة",
         email: "البريد الإلكتروني",

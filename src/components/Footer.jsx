@@ -23,7 +23,7 @@ export default function Footer() {
               {t.contactInfo.entities.map((entity) => (
                 <span key={entity.name} style={{ color: DARK_GREEN, borderColor: DARK_GREEN + "33" }}
                   className="technical border px-3 py-1 text-xs opacity-60">
-                  {entity.address.split(",")[0]}
+                  {entity.address.split("\n").pop().split(/[,\u060C]/)[0].trim()}
                 </span>
               ))}
             </div>
@@ -48,7 +48,7 @@ export default function Footer() {
             {t.contactInfo.entities.map((entity) => (
               <div key={entity.name} className="mb-4">
                 <p style={{ color: DARK_GREEN }} className="text-sm font-medium opacity-80">{entity.name}</p>
-                <p style={{ color: DARK_GREEN }} className="text-xs mt-0.5 opacity-50">{entity.address}</p>
+                <p style={{ color: DARK_GREEN }} className="text-xs mt-0.5 opacity-50 whitespace-pre-line">{entity.address}</p>
               </div>
             ))}
             <a href={`mailto:${t.contactInfo.email}`} style={{ color: DARK_GREEN }}

@@ -137,7 +137,7 @@ export default function Contact() {
                 {t.contactInfo.entities.map((entity) =>
                 <div key={entity.name} className="mb-5">
                     <p className="font-medium text-sm">{entity.name}</p>
-                    <p className="text-muted-foreground text-sm mt-1">{entity.address}</p>
+                    <p className="text-muted-foreground text-sm mt-1 whitespace-pre-line">{entity.address}</p>
                   </div>
                 )}
               </div>
