@@ -23,14 +23,14 @@ With over 1.3 million square meters under development across ten flagship projec
         {
           name: "Zawya Developments",
           location: "Riyadh, Kingdom of Saudi Arabia",
-          role: "Development & Advisory",
+          role: "Development",
           description: "The founding entity driving real estate development, design management, and project execution across the Kingdom and broader GCC region.",
         },
         {
           name: "CCGi Middle East",
           location: "Dubai, United Arab Emirates",
-          role: "Investment & Fund Management",
-          description: "A strategic co-entity providing investment structuring, fund management, and capital formation expertise across international markets.",
+          role: "Development Management",
+          description: "A strategic co-entity providing development management expertise across international markets.",
         },
       ],
       hospitalityExperience: `Our hospitality portfolio spans partnerships with the world's most respected hotel operators, including IHG, Accor, and Dusit. From five-star city hotels to ultra-luxury branded residences, we understand the operational, financial, and design requirements that define hospitality excellence.
@@ -188,7 +188,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
   },
   ar: {
     company: {
-      name: "زاوية",
+      name: "شركة زاوية للتطوير",
       fullName: "زاوية للتطوير العقاري",
       tagline: "المواءمة بين نجاح التطوير العقاري\nوتميّز التصميم المعماري",
       shortDescription:
@@ -205,16 +205,16 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       ],
       entities: [
         {
-          name: "زاوية للتطوير",
+          name: "شركة زاوية للتطوير",
           location: "الرياض، المملكة العربية السعودية",
-          role: "التطوير والاستشارات",
+          role: "التطوير",
           description: "الكيان المؤسس الذي يقود التطوير العقاري وإدارة التصميم وتنفيذ المشاريع في جميع أنحاء المملكة ومنطقة الخليج.",
         },
         {
           name: "CCGi الشرق الأوسط",
           location: "دبي، الإمارات العربية المتحدة",
-          role: "الاستثمار وإدارة الصناديق",
-          description: "كيان شريك استراتيجي يقدم خبرة هيكلة الاستثمارات وإدارة الصناديق وتكوين رأس المال عبر الأسواق الدولية.",
+          role: "إدارة التطوير",
+          description: "كيان شريك استراتيجي يقدم خبرة إدارة التطوير عبر الأسواق الدولية.",
         },
       ],
       hospitalityExperience: `تمتد محفظتنا الضيافية لتشمل شراكات مع أهم مشغلي الفنادق في العالم، بما في ذلك IHG وأكور ودوسيت. من فنادق المدينة ذات الخمس نجوم إلى الإقامات المصنّفة فائقة الفخامة، نحن نفهم المتطلبات التشغيلية والمالية والتصميمية التي تحدد التميز في الضيافة.
@@ -276,7 +276,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
     contactInfo: {
       email: "info@zawyadevelopments.com",
       entities: [
-        { name: "زاوية للتطوير", address: "الرياض، المملكة العربية السعودية" },
+        { name: "شركة زاوية للتطوير", address: "الرياض، المملكة العربية السعودية" },
         { name: "CCGi الشرق الأوسط", address: "دبي، الإمارات العربية المتحدة" },
       ],
     },
@@ -290,15 +290,15 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       servicesSection: {
         number: "02",
         label: "نطاق أعمالنا",
-        title: "ست ركائز للخبرة العقارية المتكاملة",
-        description: "من تحديد الأراضي إلى إدارة المرافق، نحن نغطي دورة حياة التطوير العقاري بالكامل.",
+        title: "خبرة عقارية متكاملة",
+        description: "نغطي دورة حياة التطوير العقاري بأكملها، انطلاقاً من دراسات الجدوى الأولية، وإدارة أعمال البناء والبناء، وحتى مرحلة الإنجاز والتسليم النهائي.",
         viewAll: "عرض جميع الخبرات",
       },
       projectsSection: {
         number: "03",
         label: "المشاريع البارزة",
-        title: "مشاريع مختارة في السعودية والإمارات",
-        description: "محفظة تضم الضيافة والمشاريع المختلطة والبنية التحتية والإقامات المصنّفة.",
+        title: "مشاريعنا",
+        description: "محفظة تضم مشاريع الضيافة، والمشاريع متعددة الاستخدام، والبنية التحتية، والسكنية.",
         viewAll: "عرض جميع المشاريع",
         pageHeader: "عشرة مشاريع رئيسية. أكثر من 1.3 مليون متر مربع.",
         pageDescription: "من فنادق الخمس نجوم إلى البنية التحتية واسعة النطاق، تمثل محفظتنا اتساع وعمق خبرتنا في التطوير عبر الخليج.",
@@ -312,7 +312,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       },
       about: {
         heroLabel: "عن زاوية",
-        heroTitle: "نبني المستقبل، معلماً واحداً في كل مرة.",
+        heroTitle: "نبني المستقبل، معلماً تلو الآخر.",
         storyLabel: "01 / قصتنا",
         philosophyLabel: "02 / الفلسفة",
         structureNumber: "03",
@@ -339,7 +339,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       servicesPage: {
         number: "01",
         label: "الخبرات",
-        title: "ست ركائز للخبرة العقارية المتكاملة",
+        title: "خبرة عقارية متكاملة",
         description: "نهجنا الشامل يغطي كل مرحلة من مراحل دورة حياة العقار، مما يضمن التنفيذ السلس من المفهوم إلى التشغيل.",
         cta: "ناقش مشروعك",
       },
@@ -365,7 +365,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       footer: {
         navigate: "تصفح",
         offices: "المكاتب",
-        copyright: "© 2026 زاوية للتطوير. جميع الحقوق محفوظة.",
+        copyright: "© 2026 شركة زاوية للتطوير. جميع الحقوق محفوظة.",
         regions: "السعودية — الإمارات",
       },
     },

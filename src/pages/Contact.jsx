@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeader from "@/components/SectionHeader";
 import AnimatedLine from "@/components/AnimatedLine";
 import { content } from "@/data/content";
 import { useLanguage } from "@/lib/LanguageContext";
+
+const CONTACT_HERO = "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop";
 
 export default function Contact() {
   const { lang } = useLanguage();
@@ -33,13 +36,45 @@ export default function Contact() {
 
   return (
     <div className="pt-20">
+      {/* Hero */}
+      <section className="relative h-[45vh] md:h-[55vh] min-h-[300px] overflow-hidden bg-charcoal">
+        <motion.img
+          src={CONTACT_HERO}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+        />
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="relative h-full flex items-end px-6 md:px-10 lg:px-16 pb-14 md:pb-20">
+          <div className="max-w-4xl">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="technical text-white/60 block mb-5"
+            >
+              {ui.label}
+            </motion.span>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+              className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[0.95] text-balance"
+            >
+              {ui.title}
+            </motion.h1>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 md:py-24 px-6 md:px-10 lg:px-16">
-        <SectionHeader
-          number={ui.number}
-          label={ui.label}
-          title={ui.title}
-          description={ui.description} />
-        
+        <Reveal>
+          <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-2xl">
+            {ui.description}
+          </p>
+        </Reveal>
       </section>
 
       <section className="px-6 md:px-10 lg:px-16 pb-20 md:pb-32">
