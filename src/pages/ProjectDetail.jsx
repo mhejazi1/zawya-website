@@ -150,7 +150,7 @@ export default function ProjectDetail() {
                       <img src="https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/c7256f805_image53.jpg"
 
                   alt={`${tr(project, "name", lang)} — ${i + 1}`}
-                  className="w-full h-auto object-cover" />
+                  className="w-full h-auto object-cover hidden" />
                   
                     </div>
                   </Reveal>
