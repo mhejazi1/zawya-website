@@ -27,16 +27,16 @@ export default function Services() {
             const isGreen = i % 2 !== 0;
             return (
               <Reveal key={service.name}>
-                <div className={`${isGreen ? "bg-[#93A89C] text-white" : "bg-background"} p-8 md:p-12 group transition-colors duration-500`}>
+                <div className={`${isGreen ? "bg-[#93A89C]" : "bg-background"} p-8 md:p-12 group transition-colors duration-500`}>
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
                     <div className="md:col-span-1">
-                      <span className={`technical ${isGreen ? "text-white/50" : "text-sage"}`}>{service.number}</span>
+                      <span className="technical text-sage">{service.number}</span>
                     </div>
                     <div className="md:col-span-4">
-                      <h3 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-tight mb-3">
+                      <h3 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-tight mb-3 text-foreground">
                         {service.name}
                       </h3>
-                      <p className={`text-sm leading-relaxed ${isGreen ? "text-white/60" : "text-muted-foreground"}`}>
+                      <p className="text-sm leading-relaxed text-muted-foreground">
                         {service.description}
                       </p>
                     </div>
@@ -45,9 +45,9 @@ export default function Services() {
                         {service.subServices.map((sub, j) => (
                           <li
                             key={j}
-                            className={`text-sm flex items-start gap-2 py-1 ${isGreen ? "text-white/70" : "text-foreground/70"}`}
+                            className="text-sm text-foreground/70 flex items-start gap-2 py-1"
                           >
-                            <span className={`mt-0.5 flex-shrink-0 ${isGreen ? "text-white/50" : "text-sage"}`}>—</span>
+                            <span className="text-sage mt-0.5 flex-shrink-0">—</span>
                             {sub}
                           </li>
                         ))}

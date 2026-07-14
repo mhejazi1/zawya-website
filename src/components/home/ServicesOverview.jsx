@@ -25,17 +25,17 @@ export default function ServicesOverview() {
           const isGreen = i % 2 !== 0;
           return (
             <Reveal key={service.name} delay={i * 0.05}>
-              <div className={`${isGreen ? "bg-[#93A89C] text-white" : "bg-background"} p-8 md:p-10 h-full group transition-colors duration-500`}>
+              <div className={`${isGreen ? "bg-[#93A89C]" : "bg-background"} p-8 md:p-10 h-full group transition-colors duration-500`}>
                 <div className="flex items-start justify-between mb-6">
-                  <span className={`technical ${isGreen ? "text-white/50" : "text-sage"}`}>{service.number}</span>
+                  <span className={`technical ${isGreen ? "text-sage" : "text-sage"}`}>{service.number}</span>
                   <ArrowUpRight
                     size={18}
                     strokeWidth={1.5}
-                    className={`${isGreen ? "text-white/50" : "text-muted-foreground"} group-hover:rotate-45 transition-all duration-500`}
+                    className={`text-muted-foreground group-hover:rotate-45 transition-all duration-500`}
                   />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold mb-3 tracking-tight">{service.name}</h3>
-                <p className={`text-sm leading-relaxed ${isGreen ? "text-white/60" : "text-muted-foreground"}`}>{service.description}</p>
+                <h3 className="text-xl md:text-2xl font-bold mb-3 tracking-tight text-foreground">{service.name}</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">{service.description}</p>
               </div>
             </Reveal>
           );
