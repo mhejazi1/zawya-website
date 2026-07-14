@@ -5,6 +5,7 @@ import Reveal from "@/components/Reveal";
 import AnimatedLine from "@/components/AnimatedLine";
 import { content } from "@/data/content";
 import { useLanguage } from "@/lib/LanguageContext";
+import AnimatedPanel from "@/components/contact/AnimatedPanel";
 
 const CONTACT_HERO = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/10490ecb2_Riyadh_Skyline.jpg";
 
@@ -87,9 +88,9 @@ export default function Contact() {
       <section className="px-6 md:px-10 lg:px-16 py-16 md:py-24">
         <AnimatedLine className="mb-12 md:mb-16" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16">
           {/* Left: Office info */}
-          <div className="lg:col-span-4 order-2 lg:order-1">
+          <div>
             <Reveal>
               <div className="bg-[#93A89C] p-8 md:p-10 h-full">
                 <div className="flex items-center gap-3 mb-8">
@@ -120,10 +121,16 @@ export default function Contact() {
             </Reveal>
           </div>
 
-          {/* Right: Form */}
-          <div className="lg:col-span-8 order-1 lg:order-2">
-            <Reveal>
-              <form onSubmit={handleSubmit} className="space-y-10">
+          {/* Right: Animated visual */}
+          <div>
+            <AnimatedPanel />
+          </div>
+        </div>
+
+        {/* Form */}
+        <div className="mt-16 md:mt-24 max-w-3xl">
+          <Reveal>
+            <form onSubmit={handleSubmit} className="space-y-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   <div>
                     <label className="technical text-sage block mb-3">{ui.name}</label>
@@ -199,7 +206,6 @@ export default function Contact() {
                 </button>
               </form>
             </Reveal>
-          </div>
         </div>
       </section>
     </div>
