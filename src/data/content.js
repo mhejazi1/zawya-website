@@ -98,7 +98,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
     },
     ui: {
       hero: {
-        subtitle: "Real Estate Development",
+        subtitle: "Zawya Developments",
         ctaPrimary: "Our Projects",
         ctaSecondary: "About Zawya",
         scroll: "Scroll",
@@ -282,7 +282,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
     },
     ui: {
       hero: {
-        subtitle: "التطوير العقاري",
+        subtitle: "زاوية للتطوير العقاري",
         ctaPrimary: "مشاريعنا",
         ctaSecondary: "عن زاوية",
         scroll: "اسحب",
@@ -365,8 +365,8 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       footer: {
         navigate: "تصفح",
         offices: "المكاتب",
-        copyright: "© 2026 شركة زاوية للتطوير. جميع الحقوق محفوظة.",
-        regions: "للتطوير العقاري",
+        copyright: "© 2026 شركة زاوية للتطوير العقاري. جميع الحقوق محفوظة.",
+        regions: "",
       },
     },
   },
