@@ -188,7 +188,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
   },
   ar: {
     company: {
-      name: "شركة زاوية للتطوير",
+      name: "شركة زاوية للتطوير العقاري",
       fullName: "زاوية للتطوير العقاري",
       tagline: "المواءمة بين نجاح التطوير العقاري\nوتميّز التصميم المعماري",
       shortDescription:
@@ -205,7 +205,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       ],
       entities: [
         {
-          name: "شركة زاوية للتطوير",
+          name: "شركة زاوية للتطوير العقاري",
           location: "الرياض، المملكة العربية السعودية",
           role: "التطوير",
           description: "الكيان المؤسس الذي يقود التطوير العقاري وإدارة التصميم وتنفيذ المشاريع في جميع أنحاء المملكة ومنطقة الخليج.",
@@ -276,7 +276,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
     contactInfo: {
       email: "info@zawyadevelopments.com",
       entities: [
-        { name: "شركة زاوية للتطوير", address: "الرياض، المملكة العربية السعودية" },
+        { name: "شركة زاوية للتطوير العقاري", address: "الرياض، المملكة العربية السعودية" },
         { name: "CCGi الشرق الأوسط", address: "دبي، الإمارات العربية المتحدة" },
       ],
     },
