@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, MapPin, Send } from "lucide-react";
+import { ArrowRight, Mail, MapPin } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import AnimatedLine from "@/components/AnimatedLine";
 import { content } from "@/data/content";
@@ -19,22 +19,20 @@ export default function Contact() {
     subject: ui.subjects[0],
     message: ""
   });
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-    }, 800);
+    const subject = encodeURIComponent(`${form.subject} — ${form.name}${form.company ? ` (${form.company})` : ""}`);
+    const body = encodeURIComponent(
+      `${form.message}\n\n—\n${form.name}${form.company ? `\n${form.company}` : ""}\n${form.email}`
+    );
+    window.location.href = `mailto:${t.contactInfo.email}?subject=${subject}&body=${body}`;
   };
 
   const inputClass =
-    "w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors";
+    "w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors placeholder:text-muted-foreground/40";
 
   return (
     <div className="pt-20">
@@ -89,135 +87,120 @@ export default function Contact() {
       <section className="px-6 md:px-10 lg:px-16 py-16 md:py-24">
         <AnimatedLine className="mb-12 md:mb-16" />
 
-        {submitted ? (
-          <Reveal>
-            <div className="bg-[#93A89C]/10 border border-sage/30 p-12 md:p-20 text-center max-w-2xl mx-auto">
-              <div className="w-16 h-16 rounded-full bg-sage/15 flex items-center justify-center mx-auto mb-8">
-                <Send size={24} strokeWidth={1.5} className="text-sage" />
-              </div>
-              <h3 className="text-2xl md:text-4xl font-bold mb-4 tracking-tight">{ui.thankYou}</h3>
-              <p className="text-muted-foreground max-w-md mx-auto text-base leading-relaxed">{ui.thankYouMsg}</p>
-            </div>
-          </Reveal>
-        ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16">
-            {/* Left: Office info */}
-            <div className="lg:col-span-4 order-2 lg:order-1">
-              <Reveal>
-                <div className="bg-[#93A89C] p-8 md:p-10 h-full">
-                  <div className="flex items-center gap-3 mb-8">
-                    <MapPin size={18} strokeWidth={1.5} className="text-foreground/70" />
-                    <span className="technical text-foreground/60">{ui.offices}</span>
-                  </div>
-                  <div className="space-y-8">
-                    {t.contactInfo.entities.map((entity) => (
-                      <div key={entity.name} className="border-l-2 border-foreground/20 pl-5">
-                        <p className="font-bold text-sm mb-2 text-foreground">{entity.name}</p>
-                        <p className="text-foreground/60 text-sm mt-1 whitespace-pre-line leading-relaxed">{entity.address}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-10 pt-8 border-t border-foreground/15">
-                    <div className="flex items-center gap-3 mb-3">
-                      <Mail size={16} strokeWidth={1.5} className="text-foreground/70" />
-                      <span className="technical text-foreground/60">{ui.emailLabel}</span>
-                    </div>
-                    <a
-                      href={`mailto:${t.contactInfo.email}`}
-                      className="text-sm font-medium text-foreground hover:text-sage transition-colors border-b border-foreground/30 pb-1"
-                    >
-                      {t.contactInfo.email}
-                    </a>
-                  </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16">
+          {/* Left: Office info */}
+          <div className="lg:col-span-4 order-2 lg:order-1">
+            <Reveal>
+              <div className="bg-[#93A89C] p-8 md:p-10 h-full">
+                <div className="flex items-center gap-3 mb-8">
+                  <MapPin size={18} strokeWidth={1.5} className="text-foreground/70" />
+                  <span className="technical text-foreground/60">{ui.offices}</span>
                 </div>
-              </Reveal>
-            </div>
-
-            {/* Right: Form */}
-            <div className="lg:col-span-8 order-1 lg:order-2">
-              <Reveal>
-                <form onSubmit={handleSubmit} className="space-y-10">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div>
-                      <label className="technical text-sage block mb-3">{ui.name}</label>
-                      <input
-                        type="text"
-                        name="name"
-                        required
-                        value={form.name}
-                        onChange={handleChange}
-                        placeholder="—"
-                        className={inputClass}
-                      />
+                <div className="space-y-8">
+                  {t.contactInfo.entities.map((entity) => (
+                    <div key={entity.name} className="border-l-2 border-foreground/20 pl-5">
+                      <p className="font-bold text-sm mb-2 text-foreground">{entity.name}</p>
+                      <p className="text-foreground/60 text-sm mt-1 whitespace-pre-line leading-relaxed">{entity.address}</p>
                     </div>
-                    <div>
-                      <label className="technical text-sage block mb-3">{ui.company}</label>
-                      <input
-                        type="text"
-                        name="company"
-                        value={form.company}
-                        onChange={handleChange}
-                        placeholder="—"
-                        className={inputClass}
-                      />
-                    </div>
+                  ))}
+                </div>
+                <div className="mt-10 pt-8 border-t border-foreground/15">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Mail size={16} strokeWidth={1.5} className="text-foreground/70" />
+                    <span className="technical text-foreground/60">{ui.emailLabel}</span>
                   </div>
+                  <a
+                    href={`mailto:${t.contactInfo.email}`}
+                    className="text-sm font-medium text-foreground hover:text-sage transition-colors border-b border-foreground/30 pb-1"
+                  >
+                    {t.contactInfo.email}
+                  </a>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Right: Form */}
+          <div className="lg:col-span-8 order-1 lg:order-2">
+            <Reveal>
+              <form onSubmit={handleSubmit} className="space-y-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   <div>
-                    <label className="technical text-sage block mb-3">{ui.email}</label>
+                    <label className="technical text-sage block mb-3">{ui.name}</label>
                     <input
-                      type="email"
-                      name="email"
+                      type="text"
+                      name="name"
                       required
-                      value={form.email}
+                      value={form.name}
                       onChange={handleChange}
                       placeholder="—"
                       className={inputClass}
                     />
                   </div>
                   <div>
-                    <label className="technical text-sage block mb-3">{ui.subject}</label>
-                    <select
-                      name="subject"
-                      value={form.subject}
-                      onChange={handleChange}
-                      className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors appearance-none cursor-pointer"
-                    >
-                      {ui.subjects.map((subject) => (
-                        <option key={subject}>{subject}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label className="technical text-sage block mb-3">{ui.message}</label>
-                    <textarea
-                      name="message"
-                      required
-                      rows={5}
-                      value={form.message}
+                    <label className="technical text-sage block mb-3">{ui.company}</label>
+                    <input
+                      type="text"
+                      name="company"
+                      value={form.company}
                       onChange={handleChange}
                       placeholder="—"
-                      className={`${inputClass} resize-none`}
+                      className={inputClass}
                     />
                   </div>
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="group inline-flex items-center gap-3 bg-foreground text-background px-10 py-5 text-sm font-medium tracking-wide hover:bg-sage transition-colors duration-300 disabled:opacity-50"
+                </div>
+                <div>
+                  <label className="technical text-sage block mb-3">{ui.email}</label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    value={form.email}
+                    onChange={handleChange}
+                    placeholder="—"
+                    className={inputClass}
+                  />
+                </div>
+                <div>
+                  <label className="technical text-sage block mb-3">{ui.subject}</label>
+                  <select
+                    name="subject"
+                    value={form.subject}
+                    onChange={handleChange}
+                    className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors appearance-none cursor-pointer"
                   >
-                    {loading ? ui.sending : ui.send}
-                    {!loading && (
-                      <ArrowRight
-                        size={16}
-                        strokeWidth={1.5}
-                        className="group-hover:translate-x-1 transition-transform rtl:rotate-180"
-                      />
-                    )}
-                  </button>
-                </form>
-              </Reveal>
-            </div>
+                    {ui.subjects.map((subject) => (
+                      <option key={subject}>{subject}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label className="technical text-sage block mb-3">{ui.message}</label>
+                  <textarea
+                    name="message"
+                    required
+                    rows={5}
+                    value={form.message}
+                    onChange={handleChange}
+                    placeholder="—"
+                    className={`${inputClass} resize-none`}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="group inline-flex items-center gap-3 bg-foreground text-background px-10 py-5 text-sm font-medium tracking-wide hover:bg-sage transition-colors duration-300"
+                >
+                  {ui.send}
+                  <ArrowRight
+                    size={16}
+                    strokeWidth={1.5}
+                    className="group-hover:translate-x-1 transition-transform rtl:rotate-180"
+                  />
+                </button>
+              </form>
+            </Reveal>
           </div>
-        )}
+        </div>
       </section>
     </div>
   );
