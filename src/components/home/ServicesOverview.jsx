@@ -20,7 +20,7 @@ export default function ServicesOverview() {
         title={s.title}
         description={s.description}
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-flow-col md:grid-rows-3 gap-px bg-border">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border">
         {t.services.map((service, i) => {
           const isGreen = i % 2 !== 0;
           return (
