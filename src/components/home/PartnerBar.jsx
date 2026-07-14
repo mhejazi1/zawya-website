@@ -2,21 +2,22 @@ import { content } from "@/data/content";
 import { useLanguage } from "@/lib/LanguageContext";
 
 const PARTNER_LOGOS = [
-  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/9d3ee1822_Picture1.png",
-  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/4e1135ccf_Picture2.png",
-  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/8245d1819_Picture3.png",
-  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/13d90fb54_Picture4.png",
-  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/5ae7c6a5d_Picture5.png",
-  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/034541903_Picture6.png",
-  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/7bd59c442_Picture7.png",
-  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/c1262880b_Picture8.png",
-  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/80f6cf22e_Picture9.png",
-  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/6d8a9f2a2_Picture10.png",
-  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/2166dc9c8_Picture11.png",
-  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/bbf2bfbb1_Picture12.png",
-  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/92c4a7c5c_Picture13.png",
-  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/a9dfbd2fc_Picture15.png",
-  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/dc1318500_Picture16.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/db982fd9a_Picture18.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/d8260d9de_Picture19.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/00abd5014_Picture20.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/c7dca067e_Picture21.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/d6a751cad_Picture22.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/ecdd66448_Picture23.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/ee06f129b_Picture24.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/851a2a2c1_Picture25.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/67dcc6b5d_Picture26.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/a368399da_Picture27.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/8259a4371_Picture28.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/5fd208da5_Picture29.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/308a1469d_Picture30.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/70547dcec_Picture31.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/3cbe61f47_Picture32.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/8e1a6288a_Picture33.png",
 ];
 
 export default function PartnerBar() {
@@ -29,14 +30,13 @@ export default function PartnerBar() {
         <span className="technical text-muted-foreground block text-center mb-10 md:mb-14">
           {t.ui.partners.label}
         </span>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-x-8 gap-y-8 md:gap-y-10 items-center justify-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-x-6 gap-y-8 md:gap-y-10 items-center justify-items-center">
           {PARTNER_LOGOS.map((logo, i) => (
             <div key={i} className="flex items-center justify-center h-16 md:h-20 w-full">
               <img
                 src={logo}
                 alt="Industry Partner"
-                className="max-h-full max-w-full object-contain grayscale"
-                style={{ mixBlendMode: "screen" }}
+                className="max-h-full max-w-full object-contain"
               />
             </div>
           ))}
