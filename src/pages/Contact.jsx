@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Send } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import SectionHeader from "@/components/SectionHeader";
 import AnimatedLine from "@/components/AnimatedLine";
 import { content } from "@/data/content";
 import { useLanguage } from "@/lib/LanguageContext";
@@ -34,26 +33,35 @@ export default function Contact() {
     }, 800);
   };
 
+  const inputClass =
+    "w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors";
+
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="relative h-[45vh] md:h-[55vh] min-h-[300px] overflow-hidden bg-charcoal">
+      <section className="relative h-[50vh] md:h-[60vh] min-h-[340px] overflow-hidden bg-charcoal">
         <motion.img
           src={CONTACT_HERO}
           alt=""
-          className="absolute inset-0 w-full h-full object-cover opacity-40"
-          initial={{ scale: 1.1 }}
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          initial={{ scale: 1.15 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
         />
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="relative h-full flex items-end px-6 md:px-10 lg:px-16 pb-14 md:pb-20">
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent" />
+        <div className="relative h-full flex flex-col justify-end px-6 md:px-10 lg:px-16 pb-14 md:pb-20">
           <div className="max-w-4xl">
+            <motion.div
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={{ opacity: 1, scaleX: 1 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="h-px w-16 bg-sage mb-6 origin-left"
+            />
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="technical text-white/60 block mb-5"
+              className="technical text-sage block mb-5"
             >
               {ui.label}
             </motion.span>
@@ -61,99 +69,156 @@ export default function Contact() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[0.95] text-balance"
+              className="text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[0.95] text-balance"
             >
               {ui.title}
             </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 0.8 }}
+              className="mt-6 text-base md:text-lg text-white/50 max-w-xl leading-relaxed"
+            >
+              {ui.description}
+            </motion.p>
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 px-6 md:px-10 lg:px-16">
-        <Reveal>
-          <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-2xl">
-            {ui.description}
-          </p>
-        </Reveal>
-      </section>
-
-      <section className="px-6 md:px-10 lg:px-16 pb-20 md:pb-32">
+      {/* Body */}
+      <section className="px-6 md:px-10 lg:px-16 py-16 md:py-24">
         <AnimatedLine className="mb-12 md:mb-16" />
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-16">
-          <div className="lg:col-span-8">
-            {submitted ?
-            <Reveal>
-                <div className="border border-sage p-12 md:p-16 text-center">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-3 tracking-tight">{ui.thankYou}</h3>
-                  <p className="text-muted-foreground max-w-md mx-auto">{ui.thankYouMsg}</p>
-                </div>
-              </Reveal> :
 
-            <form onSubmit={handleSubmit} className="space-y-8 hidden">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
-                    <label className="technical text-muted-foreground block mb-2">{ui.name}</label>
-                    <input type="text" name="name" required value={form.name} onChange={handleChange}
-                  className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors" />
+        {submitted ? (
+          <Reveal>
+            <div className="bg-[#93A89C]/10 border border-sage/30 p-12 md:p-20 text-center max-w-2xl mx-auto">
+              <div className="w-16 h-16 rounded-full bg-sage/15 flex items-center justify-center mx-auto mb-8">
+                <Send size={24} strokeWidth={1.5} className="text-sage" />
+              </div>
+              <h3 className="text-2xl md:text-4xl font-bold mb-4 tracking-tight">{ui.thankYou}</h3>
+              <p className="text-muted-foreground max-w-md mx-auto text-base leading-relaxed">{ui.thankYouMsg}</p>
+            </div>
+          </Reveal>
+        ) : (
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16">
+            {/* Left: Office info */}
+            <div className="lg:col-span-4 order-2 lg:order-1">
+              <Reveal>
+                <div className="bg-[#93A89C] p-8 md:p-10 h-full">
+                  <div className="flex items-center gap-3 mb-8">
+                    <MapPin size={18} strokeWidth={1.5} className="text-foreground/70" />
+                    <span className="technical text-foreground/60">{ui.offices}</span>
                   </div>
-                  <div>
-                    <label className="technical text-muted-foreground block mb-2">{ui.company}</label>
-                    <input type="text" name="company" value={form.company} onChange={handleChange}
-                  className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors" />
+                  <div className="space-y-8">
+                    {t.contactInfo.entities.map((entity) => (
+                      <div key={entity.name} className="border-l-2 border-foreground/20 pl-5">
+                        <p className="font-bold text-sm mb-2 text-foreground">{entity.name}</p>
+                        <p className="text-foreground/60 text-sm mt-1 whitespace-pre-line leading-relaxed">{entity.address}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-10 pt-8 border-t border-foreground/15">
+                    <div className="flex items-center gap-3 mb-3">
+                      <Mail size={16} strokeWidth={1.5} className="text-foreground/70" />
+                      <span className="technical text-foreground/60">{ui.emailLabel}</span>
+                    </div>
+                    <a
+                      href={`mailto:${t.contactInfo.email}`}
+                      className="text-sm font-medium text-foreground hover:text-sage transition-colors border-b border-foreground/30 pb-1"
+                    >
+                      {t.contactInfo.email}
+                    </a>
                   </div>
                 </div>
-                <div>
-                  <label className="technical text-muted-foreground block mb-2">{ui.email}</label>
-                  <input type="email" name="email" required value={form.email} onChange={handleChange}
-                className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors" />
-                </div>
-                <div>
-                  <label className="technical text-muted-foreground block mb-2">{ui.subject}</label>
-                  <select name="subject" value={form.subject} onChange={handleChange}
-                className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors appearance-none cursor-pointer">
-                    {ui.subjects.map((subject) =>
-                  <option key={subject}>{subject}</option>
-                  )}
-                  </select>
-                </div>
-                <div>
-                  <label className="technical text-muted-foreground block mb-2">{ui.message}</label>
-                  <textarea name="message" required rows={5} value={form.message} onChange={handleChange}
-                className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors resize-none" />
-                </div>
-                <button type="submit" disabled={loading}
-              className="group inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 text-sm font-medium tracking-wide hover:bg-sage transition-colors duration-300 disabled:opacity-50">
-                  {loading ? ui.sending : ui.send}
-                  {!loading && <ArrowRight size={16} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform rtl:rotate-180" />}
-                </button>
-              </form>
-            }
-          </div>
+              </Reveal>
+            </div>
 
-          <div className="lg:col-span-4 space-y-10">
-            <Reveal>
-              <div>
-                <span className="technical text-sage block mb-5">{ui.offices}</span>
-                {t.contactInfo.entities.map((entity) =>
-                <div key={entity.name} className="mb-5">
-                    <p className="font-medium text-sm">{entity.name}</p>
-                    <p className="text-muted-foreground text-sm mt-1 whitespace-pre-line">{entity.address}</p>
+            {/* Right: Form */}
+            <div className="lg:col-span-8 order-1 lg:order-2">
+              <Reveal>
+                <form onSubmit={handleSubmit} className="space-y-10">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                      <label className="technical text-sage block mb-3">{ui.name}</label>
+                      <input
+                        type="text"
+                        name="name"
+                        required
+                        value={form.name}
+                        onChange={handleChange}
+                        placeholder="—"
+                        className={inputClass}
+                      />
+                    </div>
+                    <div>
+                      <label className="technical text-sage block mb-3">{ui.company}</label>
+                      <input
+                        type="text"
+                        name="company"
+                        value={form.company}
+                        onChange={handleChange}
+                        placeholder="—"
+                        className={inputClass}
+                      />
+                    </div>
                   </div>
-                )}
-              </div>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <div>
-                <span className="technical text-sage block mb-5">{ui.emailLabel}</span>
-                <a href={`mailto:${t.contactInfo.email}`}
-                className="text-sm hover:text-sage transition-colors border-b border-border pb-1">
-                  {t.contactInfo.email}
-                </a>
-              </div>
-            </Reveal>
+                  <div>
+                    <label className="technical text-sage block mb-3">{ui.email}</label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      value={form.email}
+                      onChange={handleChange}
+                      placeholder="—"
+                      className={inputClass}
+                    />
+                  </div>
+                  <div>
+                    <label className="technical text-sage block mb-3">{ui.subject}</label>
+                    <select
+                      name="subject"
+                      value={form.subject}
+                      onChange={handleChange}
+                      className="w-full bg-transparent border-b border-border py-3 text-base focus:border-sage focus:outline-none transition-colors appearance-none cursor-pointer"
+                    >
+                      {ui.subjects.map((subject) => (
+                        <option key={subject}>{subject}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="technical text-sage block mb-3">{ui.message}</label>
+                    <textarea
+                      name="message"
+                      required
+                      rows={5}
+                      value={form.message}
+                      onChange={handleChange}
+                      placeholder="—"
+                      className={`${inputClass} resize-none`}
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="group inline-flex items-center gap-3 bg-foreground text-background px-10 py-5 text-sm font-medium tracking-wide hover:bg-sage transition-colors duration-300 disabled:opacity-50"
+                  >
+                    {loading ? ui.sending : ui.send}
+                    {!loading && (
+                      <ArrowRight
+                        size={16}
+                        strokeWidth={1.5}
+                        className="group-hover:translate-x-1 transition-transform rtl:rotate-180"
+                      />
+                    )}
+                  </button>
+                </form>
+              </Reveal>
+            </div>
           </div>
-        </div>
+        )}
       </section>
-    </div>);
-
+    </div>
+  );
 }
