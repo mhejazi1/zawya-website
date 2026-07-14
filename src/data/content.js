@@ -128,7 +128,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       },
       about: {
         heroLabel: "About Zawya",
-        heroTitle: "Building the future of the GCC, one landmark at a time.",
+        heroTitle: "Building the future, one landmark at a time.",
         storyLabel: "01 / Our Story",
         philosophyLabel: "02 / Philosophy",
         structureNumber: "03",
@@ -312,7 +312,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       },
       about: {
         heroLabel: "عن زاوية",
-        heroTitle: "نبني مستقبل الخليج، معلماً واحداً في كل مرة.",
+        heroTitle: "نبني المستقبل، معلماً واحداً في كل مرة.",
         storyLabel: "01 / قصتنا",
         philosophyLabel: "02 / الفلسفة",
         structureNumber: "03",
