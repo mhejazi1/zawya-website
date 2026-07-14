@@ -1,7 +1,7 @@
 import { content } from "@/data/content";
 import { useLanguage } from "@/lib/LanguageContext";
 
-const PARTNERS_IMG = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/de7886cd8_logos.png";
+const PARTNERS_IMG = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/660961de7_logos.png";
 
 export default function PartnerBar() {
   const { lang } = useLanguage();

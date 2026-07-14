@@ -6,7 +6,7 @@ export const content = {
     company: {
       name: "Zawya",
       fullName: "Zawya Developments",
-      tagline: "Harmonizing Development Success with Design Excellence",
+      tagline: "Harmonizing Development Success\nwith Design Excellence",
       shortDescription:
         "A premier real estate development and advisory firm headquartered in Saudi Arabia, with a strategic co-entity in Dubai.",
       aboutText: `Zawya Developments is a premier real estate development and advisory firm headquartered in Riyadh, Saudi Arabia, with a strategic co-entity—CCGi Middle East—in Dubai, United Arab Emirates. We harmonize development success with design excellence, delivering landmark projects across the Kingdom of Saudi Arabia and the United Arab Emirates.
@@ -98,8 +98,8 @@ Our team brings direct experience in hotel development, operator negotiation, pr
     },
     ui: {
       hero: {
-        subtitle: "Real Estate Development & Advisory — KSA · UAE",
-        ctaPrimary: "Explore Our Projects",
+        subtitle: "Real Estate Development — KSA · UAE",
+        ctaPrimary: "Our Projects",
         ctaSecondary: "About Zawya",
         scroll: "Scroll",
       },
@@ -190,7 +190,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
     company: {
       name: "زاوية",
       fullName: "زاوية للتطوير العقاري",
-      tagline: "المواءمة بين نجاح التطوير العقاري وتميّز التصميم المعماري",
+      tagline: "المواءمة بين نجاح التطوير العقاري\nوتميّز التصميم المعماري",
       shortDescription:
         "شركة رائدة في التطوير والاستشارات العقارية مقرها في المملكة العربية السعودية، مع كيان شريك استراتيجي في دبي.",
       aboutText: `زاوية للتطوير شركة رائدة في التطوير والاستشارات العقارية، يقع مقرها الرئيسي في الرياض، المملكة العربية السعودية، مع كيان شريك استراتيجي — CCGi الشرق الأوسط — في دبي، الإمارات العربية المتحدة. نحن نوائم بين نجاح التطوير والتميز في التصميم، مقدّمين مشاريع بارزة في جميع أنحاء المملكة العربية السعودية والإمارات العربية المتحدة.
@@ -282,8 +282,8 @@ Our team brings direct experience in hotel development, operator negotiation, pr
     },
     ui: {
       hero: {
-        subtitle: "التطوير والاستشارات العقارية — السعودية · الإمارات",
-        ctaPrimary: "استكشف مشاريعنا",
+        subtitle: "التطوير العقاري — السعودية · الإمارات",
+        ctaPrimary: "مشاريعنا",
         ctaSecondary: "عن زاوية",
         scroll: "اسحب",
       },
