@@ -121,7 +121,7 @@ export default function About() {
       </section>
 
       {/* Hospitality */}
-      <section className="py-20 md:py-32 px-6 md:px-10 lg:px-16 bg-charcoal text-white">
+      <section className="py-20 md:py-32 px-6 md:px-10 lg:px-16 bg-[#52665B] text-white">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           <div className="md:col-span-4">
             <Reveal>
