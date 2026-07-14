@@ -38,7 +38,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="font-bold tracking-tight leading-[1.1] whitespace-pre-line text-white [font-family:'Blauer_Nue',_'Dubai',_ui-sans-serif,_system-ui,_sans-serif] text-3xl md:text-3xl lg:text-3xl">
+            className="font-bold tracking-tight leading-[1.1] whitespace-pre-line rtl:text-xl md:rtl:text-3xl text-white [font-family:'Blauer_Nue',_'Dubai',_ui-sans-serif,_system-ui,_sans-serif] text-3xl md:text-3xl lg:text-3xl">
             {content[lang].company.tagline}
           </motion.h1>
           <motion.div
