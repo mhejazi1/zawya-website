@@ -6,7 +6,7 @@ const PARTNER_LOGOS = [
   "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/d8260d9de_Picture19.png",
   "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/00abd5014_Picture20.png",
   "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/c7dca067e_Picture21.png",
-  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/d6a751cad_Picture22.png",
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/a4c548b63_image.png",
   "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/ecdd66448_Picture23.png",
   "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/ee06f129b_Picture24.png",
   "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/851a2a2c1_Picture25.png",
@@ -36,7 +36,7 @@ export default function PartnerBar() {
               <img
                 src={logo}
                 alt="Industry Partner"
-                className="max-h-full max-w-full object-contain"
+                className="h-full w-full object-contain"
               />
             </div>
           ))}
