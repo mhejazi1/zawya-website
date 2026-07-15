@@ -1,5 +1,5 @@
 export const logoUrl =
-  "https://media.base44.com/images/public/user_6a529df7811b31308f468fdb/3fd9238ae_ZawyaDevelopments_v6.png";
+  "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/f2b12ac48_ZawyaDevelopments_v6.svg";
 
 export const content = {
   en: {
