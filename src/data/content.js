@@ -332,7 +332,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
         coordinates: "الإحداثيات",
         scope: "نطاق الأعمال",
         nextProject: "المشروع التالي",
-        quote: "نطمح إلى أن نكون النموذج الرائد في التميز التطويري، من خلال منهجية متكاملة وشاملة.",
+        quote: "نطمح إلى أن نكون النموذج الرائد في التميز التطويري، من خلال منهجية متكاملة وشاملة",
       },
       servicesPage: {
         number: "01",
