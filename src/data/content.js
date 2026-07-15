@@ -15,9 +15,9 @@ Our integrated approach spans the full real estate lifecycle—from land identif
 
 With over 1.3 million square meters under development across ten flagship projects, Zawya stands as a trusted partner to IHG, the Saudi Ministry of Investment, Eagle Hills, and other industry leaders who share our commitment to architectural integrity and predictable long-term results.`,
       philosophy: [
-        "We aim to set the benchmark in excellence in project development by taking a holistic and integrated approach.",
-        "We always strive to achieve predictable, long-term results rather than pursue rapid, short-term growth.",
-        "The right mix of planning, monitoring, and controlling can make the difference in completing a project on time, on budget, and with high quality results.",
+        "We aim to set the benchmark in excellence in project development by taking a holistic and integrated approach",
+        "We always strive to achieve predictable, long-term results rather than pursue rapid, short-term growth",
+        "The right mix of planning, monitoring, and controlling can make the difference in completing a project on time, on budget, and with high quality results",
       ],
       entities: [
         {
