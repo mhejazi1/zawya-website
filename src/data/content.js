@@ -128,7 +128,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
       },
       about: {
         heroLabel: "About Zawya",
-        heroTitle: "Building the future, one landmark at a time.",
+        heroTitle: "Building the future, one landmark at a time",
         storyLabel: "01 / Our Story",
         philosophyLabel: "02 / Philosophy",
         structureNumber: "03",
@@ -150,7 +150,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
         coordinates: "Coordinates",
         scope: "Scope of Work",
         nextProject: "Next Project",
-        quote: "We aim to set the benchmark in excellence in project development by taking a holistic and integrated approach.",
+        quote: "We aim to set the benchmark in excellence in project development by taking a holistic and integrated approach",
       },
       servicesPage: {
         number: "01",
