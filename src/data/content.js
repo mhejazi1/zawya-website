@@ -30,7 +30,7 @@ With over 1.3 million square meters under development across ten flagship projec
           name: "CCGi Middle East",
           location: "Dubai, United Arab Emirates",
           role: "Development Management",
-          description: "A strategic partner specializing in real estate development services, combining professional methodology with project leadership to achieve strategic goals.",
+          description: "A strategic partner specializing in real estate development services, combining professional methodology with project leadership.",
         },
       ],
       hospitalityExperience: `Our hospitality portfolio spans partnerships with the world's most respected hotel operators, including IHG, Accor, and Dusit. From five-star city hotels to ultra-luxury branded residences, we understand the operational, financial, and design requirements that define hospitality excellence.
