@@ -77,7 +77,7 @@ export default function Contact() {
                 </div>
                 <div className="space-y-8">
                   {t.contactInfo.entities.map((entity) => (
-                    <div key={entity.name} className="border-l-2 border-foreground/20 pl-5">
+                    <div key={entity.name} className="border-l-2 rtl:border-l-0 rtl:border-r-2 border-foreground/20 pl-5 rtl:pl-0 rtl:pr-5">
                       <p className="font-bold text-sm mb-2 text-foreground">{entity.name}</p>
                       <p className="text-foreground/60 text-sm mt-1 whitespace-pre-line leading-relaxed">{entity.address}</p>
                     </div>
