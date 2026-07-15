@@ -160,8 +160,8 @@ export default function ProjectDetail() {
 
             <Reveal>
               <div className="my-16 md:my-24 py-8 border-y border-border">
-                <blockquote className="text-xl md:text-3xl font-bold tracking-tight display-serif text-balance leading-[1.2] rtl:text-right">
-                  {lang === "ar" ? `«${t.quote}»` : `\u201C${t.quote}\u201D`}
+                <blockquote className="text-xl md:text-3xl font-bold tracking-tight display-serif text-balance leading-[1.2]">
+                  &laquo;{t.quote}&raquo;
                 </blockquote>
               </div>
             </Reveal>
