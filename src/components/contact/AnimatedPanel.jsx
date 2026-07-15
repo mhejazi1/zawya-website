@@ -59,7 +59,7 @@ export default function AnimatedPanel() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="text-xl md:text-2xl font-light text-white/90 whitespace-pre-line leading-snug tracking-tight"
+          className="text-xl md:text-2xl font-bold text-white/90 whitespace-pre-line leading-snug tracking-tight"
         >
           {tagline}
         </motion.p>
