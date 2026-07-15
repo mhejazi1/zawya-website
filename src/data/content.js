@@ -24,13 +24,13 @@ With over 1.3 million square meters under development across ten flagship projec
           name: "Zawya Developments",
           location: "Riyadh, Kingdom of Saudi Arabia",
           role: "Development",
-          description: "The founding entity driving real estate development, design management, and project execution across the Kingdom and broader GCC region.",
+          description: "The founding entity driving real estate development, design management, and project execution across the Kingdom.",
         },
         {
           name: "CCGi Middle East",
           location: "Dubai, United Arab Emirates",
           role: "Development Management",
-          description: "A strategic co-entity providing development management expertise across international markets.",
+          description: "A strategic partner specialized in providing real estate development services, relying on a professional methodology in leading projects and ensuring the achievement of strategic goals.",
         },
       ],
       hospitalityExperience: `Our hospitality portfolio spans partnerships with the world's most respected hotel operators, including IHG, Accor, and Dusit. From five-star city hotels to ultra-luxury branded residences, we understand the operational, financial, and design requirements that define hospitality excellence.
