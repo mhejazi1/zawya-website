@@ -117,7 +117,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
         description: "A portfolio spanning hospitality, mixed-use, infrastructure, and branded residences.",
         viewAll: "View All Projects",
         pageHeader: "Ten flagship developments. Over 1.3 million square meters.",
-        pageDescription: "From five-star hotels to large-scale infrastructure, our portfolio represents the breadth and depth of our development expertise across the GCC.",
+        pageDescription: "A diverse portfolio of landmark developments that define excellence in real estate, from vision to final delivery.",
       },
       partners: { label: "Trusted By Industry Leaders" },
       cta: {
@@ -299,7 +299,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
         description: "محفظة تضم مشاريع الضيافة، والمشاريع متعددة الاستخدام، والبنية التحتية، والسكنية.",
         viewAll: "عرض جميع المشاريع",
         pageHeader: "عشرة مشاريع رئيسية. أكثر من 1.3 مليون متر مربع.",
-        pageDescription: "من فنادق الخمس نجوم إلى البنية التحتية واسعة النطاق، تمثل محفظتنا اتساع وعمق خبرتنا في التطوير عبر الخليج.",
+        pageDescription: "محفظة متنوعة من المشاريع النوعية التي ترسي معايير التميز في التطوير العقاري، من الرؤية وحتى التسليم النهائي.",
       },
       partners: { label: "خبرة في التعاون مع كبرى الشركات العالمية" },
       cta: {
@@ -338,7 +338,7 @@ Our team brings direct experience in hotel development, operator negotiation, pr
         number: "01",
         label: "الخبرات",
         title: "خبرة عقارية متكاملة",
-        description: "نهجنا الشامل يغطي كل مرحلة من مراحل دورة حياة العقار، مما يضمن التنفيذ السلس من المفهوم إلى التشغيل.",
+        description: "نتبنى منهجية عمل متكاملة تدير دورة حياة المشروع بدقة، لضمان تنفيذٍ انسيابي يمتد من بلورة الفكرة وحتى مرحلة التشغيل النهائي.",
         cta: "ناقش مشروعك",
       },
       contact: {
