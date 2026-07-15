@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeader from "@/components/SectionHeader";
 import AnimatedLine from "@/components/AnimatedLine";
@@ -82,7 +80,7 @@ export default function About() {
                 <div className="relative">
                   <span className="technical text-sage/40 block mb-4 text-center">0{i + 1}</span>
                   <blockquote className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-center text-balance display-serif leading-[1.2] text-foreground">
-                    &ldquo;{quote}&rdquo;
+                    &laquo;{quote}&raquo;
                   </blockquote>
                   {i < t.company.philosophy.length - 1 && (
                     <div className="mt-16 md:mt-24 h-px w-24 mx-auto bg-sage/20" />
@@ -138,13 +136,6 @@ export default function About() {
                   {para}
                 </p>
               ))}
-              <Link
-                to="/contact"
-                className="group inline-flex items-center gap-3 mt-4 text-sm font-medium border-b border-white/30 pb-1 hover:border-white transition-colors"
-              >
-                {ui.partnerLink}
-                <ArrowRight size={16} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform rtl:rotate-180" />
-              </Link>
             </Reveal>
           </div>
         </div>

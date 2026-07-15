@@ -30,9 +30,9 @@ export default function PartnerBar() {
         <span className="technical text-muted-foreground block text-center mb-10 md:mb-14">
           {t.ui.partners.label}
         </span>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-x-6 gap-y-8 md:gap-y-10 items-center justify-items-center">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-4 gap-y-6 md:gap-x-6 md:gap-y-10 items-center justify-items-center">
           {PARTNER_LOGOS.map((logo, i) => (
-            <div key={i} className="flex items-center justify-center h-16 md:h-20 w-full">
+            <div key={i} className="flex items-center justify-center h-10 md:h-20 w-full">
               <img
                 src={logo}
                 alt="Industry Partner"
