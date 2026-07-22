@@ -30,7 +30,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-charcoal">
+    <section className="relative h-screen min-h-[600px] w-full max-w-full m-0 p-0 overflow-x-hidden bg-charcoal">
       <motion.div className="absolute inset-0" style={{ scale }}>
         <video
           ref={videoRef}
@@ -92,6 +92,6 @@ export default function HeroSection() {
         <span className="technical text-white/40 [writing-mode:vertical-rl] rotate-180 rtl:[writing-mode:vertical-lr] rtl:rotate-0">{t.scroll}</span>
         <div className="w-px h-12 bg-white/30" />
       </motion.div>
-    </section>);
-
+    </section>
+  );
 }
