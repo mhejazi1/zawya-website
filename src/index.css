@@ -298,8 +298,20 @@
   100% { background-position: 300% 50%; }
 }
 
-html, body {
-  width: 100%;
-  position: relative;
-  overflow-x: hidden;
+/* FIX: Remove white line on left side */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100vw !important;
+}
+
+html {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100vw !important;
+}
+
+* {
+    max-width: 100vw;
+    box-sizing: border-box;
 }
