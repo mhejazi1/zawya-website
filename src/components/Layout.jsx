@@ -11,7 +11,7 @@ export default function Layout() {
       <CustomCursor />
       <ScrollProgress />
       <Navbar />
-      <main>
+      <main className="w-full max-w-full m-0 p-0 overflow-x-hidden">
         <Outlet />
       </main>
       <Footer />
