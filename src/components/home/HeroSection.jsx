@@ -1,12 +1,11 @@
+import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { content } from "@/data/content";
 import { useLanguage } from "@/lib/LanguageContext";
 
-// IHG Crowne Plaza Jeddah — the main hero image per portfolio
-const HERO_IMAGE = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/b01dd785f_crowne-plaza-jeddah-7087756169-2x1.png";
-const HERO_IMAGE_MOBILE = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/33cfc9c71_image54.jpg";
+const HERO_VIDEO = "https://media.base44.com/videos/public/6a529e10d961dab7e40fd05d/3f245ff64_MainPageVideo.mp4";
 
 export default function HeroSection() {
   const { lang } = useLanguage();
@@ -15,12 +14,36 @@ export default function HeroSection() {
   const scale = useTransform(scrollYProgress, [0, 0.3], [1.12, 1]);
   const opacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
   const y = useTransform(scrollYProgress, [0, 0.15], [0, -80]);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const tryPlay = () => { video.play().catch(() => {}); };
+    video.addEventListener("loadeddata", tryPlay);
+    video.addEventListener("canplay", tryPlay);
+    tryPlay();
+    return () => {
+      video.removeEventListener("loadeddata", tryPlay);
+      video.removeEventListener("canplay", tryPlay);
+    };
+  }, []);
 
   return (
     <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-charcoal">
       <motion.div className="absolute inset-0" style={{ scale }}>
-        <img src={HERO_IMAGE} alt="" className="w-full h-full object-cover hidden lg:block" />
-        <img src={HERO_IMAGE_MOBILE} alt="" className="w-full h-[143%] object-cover object-top block lg:hidden" />
+        <video
+          ref={videoRef}
+          src={HERO_VIDEO}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          disablePictureInPicture
+          controlsList="nofullscreen noplaybackrate"
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/20" />
       </motion.div>
 
