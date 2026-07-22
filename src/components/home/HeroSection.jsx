@@ -95,10 +95,3 @@ export default function HeroSection() {
     </section>);
 
 }
-
-/* Inside your CSS file */
-.hero-container {
-  width: 100vw;
-  max-width: 100%;
-  overflow-x: hidden;
-}
