@@ -297,21 +297,3 @@
   0% { background-position: 0% 50%; }
   100% { background-position: 300% 50%; }
 }
-
-/* FIX: Remove white line on left side */
-body {
-    margin: 0 !important;
-    padding: 0 !important;
-    max-width: 100vw !important;
-}
-
-html {
-    margin: 0 !important;
-    padding: 0 !important;
-    max-width: 100vw !important;
-}
-
-* {
-    max-width: 100vw;
-    box-sizing: border-box;
-}
