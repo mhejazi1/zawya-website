@@ -86,12 +86,6 @@ export default function HeroSection() {
         </div>
       </motion.div>
 
-      <motion.div
-        style={{ opacity }}
-        className="absolute bottom-8 right-6 md:right-10 lg:right-16 flex flex-col items-center gap-3">
-        <span className="technical text-white/40 [writing-mode:vertical-rl] rotate-180 rtl:[writing-mode:vertical-lr] rtl:rotate-0">{t.scroll}</span>
-        <div className="w-px h-12 bg-white/30" />
-      </motion.div>
     </section>);
 
 }
