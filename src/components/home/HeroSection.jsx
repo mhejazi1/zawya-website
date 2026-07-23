@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from "react";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -6,6 +7,7 @@ import { content } from "@/data/content";
 import { useLanguage } from "@/lib/LanguageContext";
 
 const HERO_VIDEO = "https://media.base44.com/videos/public/6a529e10d961dab7e40fd05d/3f245ff64_MainPageVideo.mp4";
+const HERO_POSTER = "https://media.base44.com/images/public/6a529e10d961dab7e40fd05d/19cfa02bb_image.png";
 
 export default function HeroSection() {
   const { lang } = useLanguage();
@@ -15,41 +17,21 @@ export default function HeroSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
   const y = useTransform(scrollYProgress, [0, 0.15], [0, -80]);
   const videoRef = useRef(null);
-  const [posterUrl, setPosterUrl] = useState(null);
   const [videoPlaying, setVideoPlaying] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-
-    const captureFrame = () => {
-      try {
-        const canvas = document.createElement("canvas");
-        canvas.width = video.videoWidth || 1920;
-        canvas.height = video.videoHeight || 1080;
-        canvas.getContext("2d").drawImage(video, 0, 0, canvas.width, canvas.height);
-        setPosterUrl(canvas.toDataURL("image/jpeg", 0.85));
-      } catch (e) {
-        // Cross-origin video — canvas tainted, can't capture
-      }
-    };
-
     const tryPlay = () => {
       video.play()
         .then(() => setVideoPlaying(true))
-        .catch(() => { /* Low Power Mode — poster image will show */ });
+        .catch(() => { /* Low Power Mode — poster image shows instead */ });
     };
-
-    const onLoaded = () => {
-      captureFrame();
-      tryPlay();
-    };
-
-    video.addEventListener("loadeddata", onLoaded);
+    video.addEventListener("loadeddata", tryPlay);
     video.addEventListener("canplay", tryPlay);
     tryPlay();
     return () => {
-      video.removeEventListener("loadeddata", onLoaded);
+      video.removeEventListener("loadeddata", tryPlay);
       video.removeEventListener("canplay", tryPlay);
     };
   }, []);
@@ -57,13 +39,11 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-charcoal">
       <motion.div className="absolute inset-0 z-0" style={{ scale }}>
-        {posterUrl && (
-          <img
-            src={posterUrl}
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        )}
+        <img
+          src={HERO_POSTER}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <video
           ref={videoRef}
           src={`${HERO_VIDEO}#t=0.1`}
