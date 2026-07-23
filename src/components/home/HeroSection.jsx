@@ -34,7 +34,7 @@ export default function HeroSection() {
       <motion.div className="absolute inset-0 z-0" style={{ scale }}>
         <video
           ref={videoRef}
-          src={HERO_VIDEO}
+          src={`${HERO_VIDEO}#t=0.1`}
           autoPlay
           loop
           muted
