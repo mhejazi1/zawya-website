@@ -9,7 +9,7 @@ export default function Footer() {
   const t = content[lang];
 
   return (
-    <footer style={{ backgroundColor: "#f8f8f6" }}>
+    <footer style={{ backgroundColor: "#F5F5F7" }}>
       <div className="px-6 md:px-10 lg:px-16 pt-8 md:pt-10 pb-16 md:pb-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
           <div className="md:col-span-5">
