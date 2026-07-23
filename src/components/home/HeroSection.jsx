@@ -31,7 +31,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-charcoal">
-      <motion.div className="absolute inset-0" style={{ scale }}>
+      <motion.div className="absolute inset-0 z-0" style={{ scale }}>
         <video
           ref={videoRef}
           src={HERO_VIDEO}
@@ -44,12 +44,12 @@ export default function HeroSection() {
           controlsList="nofullscreen noplaybackrate"
           className="w-full h-full object-cover pointer-events-none"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/20" />
       </motion.div>
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/75 via-black/35 to-black/20 pointer-events-none" />
 
       <motion.div
         style={{ opacity, y }}
-        className="relative h-full flex flex-col justify-end px-6 md:px-10 lg:px-16 pb-16 md:pb-24">
+        className="relative z-20 h-full flex flex-col justify-end px-6 md:px-10 lg:px-16 pb-16 md:pb-24">
         
         <div className="max-w-7xl">
           <motion.span
