@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -15,16 +15,41 @@ export default function HeroSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
   const y = useTransform(scrollYProgress, [0, 0.15], [0, -80]);
   const videoRef = useRef(null);
+  const [posterUrl, setPosterUrl] = useState(null);
+  const [videoPlaying, setVideoPlaying] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    const tryPlay = () => { video.play().catch(() => {}); };
-    video.addEventListener("loadeddata", tryPlay);
+
+    const captureFrame = () => {
+      try {
+        const canvas = document.createElement("canvas");
+        canvas.width = video.videoWidth || 1920;
+        canvas.height = video.videoHeight || 1080;
+        canvas.getContext("2d").drawImage(video, 0, 0, canvas.width, canvas.height);
+        setPosterUrl(canvas.toDataURL("image/jpeg", 0.85));
+      } catch (e) {
+        // Cross-origin video — canvas tainted, can't capture
+      }
+    };
+
+    const tryPlay = () => {
+      video.play()
+        .then(() => setVideoPlaying(true))
+        .catch(() => { /* Low Power Mode — poster image will show */ });
+    };
+
+    const onLoaded = () => {
+      captureFrame();
+      tryPlay();
+    };
+
+    video.addEventListener("loadeddata", onLoaded);
     video.addEventListener("canplay", tryPlay);
     tryPlay();
     return () => {
-      video.removeEventListener("loadeddata", tryPlay);
+      video.removeEventListener("loadeddata", onLoaded);
       video.removeEventListener("canplay", tryPlay);
     };
   }, []);
@@ -32,6 +57,13 @@ export default function HeroSection() {
   return (
     <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-charcoal">
       <motion.div className="absolute inset-0 z-0" style={{ scale }}>
+        {posterUrl && (
+          <img
+            src={posterUrl}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        )}
         <video
           ref={videoRef}
           src={`${HERO_VIDEO}#t=0.1`}
@@ -43,6 +75,7 @@ export default function HeroSection() {
           disablePictureInPicture
           controlsList="nofullscreen noplaybackrate"
           className="w-full h-full object-cover pointer-events-none"
+          style={{ opacity: videoPlaying ? 1 : 0 }}
         />
       </motion.div>
       <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/75 via-black/35 to-black/20 pointer-events-none" />
