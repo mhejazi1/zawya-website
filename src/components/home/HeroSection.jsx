@@ -86,18 +86,25 @@ export default function HeroSection() {
             className="mt-10 flex flex-col sm:flex-row gap-4">
             <Link
               to="/projects"
-              className="group inline-flex items-center justify-center gap-3 bg-white text-charcoal px-8 py-4 text-sm font-medium tracking-wide hover:bg-sage hover:text-white transition-colors duration-300">
-              {t.ctaPrimary}
-              <ArrowRight size={16} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform rtl:rotate-180" />
-            </Link>
-            <Link
-              to="/about"
+              className="group inline-flex self-start sm:self-auto items-center justify-center gap-3 bg-sage text-white px-6 py-3 text-xs sm:text-sm font-medium tracking-wide border border-sage w-40 sm:w-auto sm:px-8 sm:py-4 hover:bg-sage/85 transition-colors duration-300">
+               {t.ctaPrimary}
+               {t.ctaPrimary}
+               <ArrowRight size={16} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform rtl:rotate-180" />
+               <ArrowRight size={16} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform rtl:rotate-180" />
+             </Link>
+             </Link>
+             <Link
+             <Link
+               to="/about"
+               to="/about"
               className="inline-flex items-center justify-center gap-3 border border-white/30 text-white px-8 py-4 text-sm font-medium tracking-wide hover:bg-white/10 transition-colors duration-300">
-              {t.ctaSecondary}
-            </Link>
-          </motion.div>
-        </div>
-      </motion.div>
+              className="inline-flex self-start sm:self-auto items-center justify-center gap-3 border border-white/30 text-white px-6 py-3 text-xs sm:text-sm font-medium tracking-wide w-40 sm:w-auto sm:px-8 sm:py-4 hover:bg-white/10 transition-colors duration-300">
+               {t.ctaSecondary}
+               {t.ctaSecondary}
+             </Link>
+             </Link>
+           </motion.div>
+           </motion.div>
 
     </section>);
 
